@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hương Võ AI — Chìa Khóa Tự Do | Affiliate x AI</title>
-<meta name="description" content="5 Cánh Cửa Định Mệnh — Làm chủ hệ thống Affiliate x AI, mở ra cánh cửa tự do tài chính.">
+<title>Chìa Khóa Tự Do — Hương Võ | Phụ Nữ Làm Chủ Thời Đại AI</title>
+<meta name="description" content="Cuốn sách của Hương Võ dành cho người phụ nữ hiện đại — làm chủ cuộc đời, làm chủ công nghệ, mở ra cánh cửa tự do trong kỷ nguyên AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,17 +15,17 @@
 <!-- PROMO BAR -->
 <div class="promo-bar">
   <div class="promo-inner">
-    <span class="promo-text"><strong>CHÌA KHÓA TỰ DO</strong> Tặng Combo 5 chìa khóa</span>
+    <span class="promo-text" data-i18n="promo_text"><strong>CHÌA KHÓA TỰ DO</strong> — Phụ Nữ AI</span>
     <span class="promo-dot">•</span>
-    <span class="promo-label">Kết thúc sau:</span>
+    <span class="promo-label" data-i18n="promo_label">Kết thúc sau:</span>
     <div class="countdown" id="countdown">
-      <span class="cd-box"><span id="cd-days">02</span></span><span class="cd-unit">ngày</span>
+      <span class="cd-box"><span id="cd-days">372</span></span><span class="cd-unit" data-i18n="cd_days">ngày</span>
       <span class="cd-sep">:</span>
-      <span class="cd-box"><span id="cd-hours">23</span></span>
+      <span class="cd-box"><span id="cd-hours">12</span></span>
       <span class="cd-sep">:</span>
-      <span class="cd-box"><span id="cd-mins">58</span></span>
+      <span class="cd-box"><span id="cd-mins">33</span></span>
       <span class="cd-sep">:</span>
-      <span class="cd-box"><span id="cd-secs">56</span></span>
+      <span class="cd-box"><span id="cd-secs">58</span></span>
     </div>
   </div>
 </div>
@@ -33,27 +33,23 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-inner">
-    <a href="#top" class="logo">Hương Võ AI</a>
+    <a href="index.html#top" class="logo">Hương Võ</a>
 
     <nav class="nav-links" id="navLinks">
-      <a href="#hoc-vien">Học Viện</a>
-      <a href="#san-pham">Sản Phẩm</a>
-      <a href="#doi-tac">Đối Tác</a>
+      <a href="triet-ly.html" data-i18n="nav_triet_ly">Triết Lý Cuộc Sống</a>
+      <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
+      <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
+      <a href="#bat-dau" data-i18n="nav_bat_dau">Bắt Đầu</a>
+      <a href="#affiliate" data-i18n="nav_affiliate">Cộng Tác Viên</a>
     </nav>
 
     <div class="nav-right">
       <div class="lang-switch">
         <button class="lang-btn active" data-lang="vi">VI</button>
-        <span class="lang-sep">|</span>
+        <span class="lang-sep">/</span>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
-      <div class="user-chip">
-        <div class="avatar">H</div>
-        <div class="user-meta">
-          <span class="user-name">Hương</span>
-          <span class="user-tag">Free</span>
-        </div>
-      </div>
+      <div class="auth-slot" id="authSlot"></div>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -65,242 +61,256 @@
 <section class="hero" id="top">
   <div class="hero-glow"></div>
   <div class="hero-inner">
-    <a href="#san-pham" class="badge">✨ CHÌA KHÓA TỰ DO — Affiliate x AI</a>
+    <a href="#keys" class="badge" data-i18n="hero_badge">✨ CHÌA KHÓA TỰ DO — Phụ Nữ AI</a>
 
-    <h1 class="hero-title">
-      5 Cánh Cửa <span class="strike-orange">Định Mệnh</span><br>
+    <h1 class="hero-title" data-i18n="hero_title">
+      5 Cánh Cửa <span class="orange">Định Mệnh</span><br>
       Phụ Nữ Làm Chủ Cuộc Đời <span class="gold">x AI</span><br>
-      Mở Ra <span class="gold">Cánh Cửa Tự Do</span>
+      Mở Ra <span class="gold script">Cánh Cửa Tự Do</span>
     </h1>
 
-    <p class="hero-sub">
-      Bộ combo 5 cuốn sách &amp; hệ thống bài học giúp bạn xây dựng nguồn thu nhập tự động
-      từ Affiliate Marketing kết hợp sức mạnh của AI — không cần kinh nghiệm, không cần vốn lớn.
+    <p class="hero-sub" data-i18n="hero_sub">
+      Đường đời muôn nẻo đổi thay,<br>
+      AI góp sức dựng xây tháng ngày.<br><br>
+      Giặc còn vượt gió băng mây,<br>
+      Huống chi tự viết tương lai của mình.
     </p>
 
     <div class="hero-cta">
-      <a href="#pricing" class="btn btn-primary">Nhận Combo 5 Chìa Khóa</a>
-      <a href="#keys" class="btn btn-ghost">Tìm hiểu thêm</a>
+      <a href="#mua" class="btn btn-primary" data-i18n="hero_cta1">Mở Khóa Ngay</a>
+      <a href="doc-thu.html" class="btn btn-ghost" data-i18n="hero_cta2">Đọc Thử Miễn Phí</a>
     </div>
 
-    <!-- BOOK SHOWCASE -->
-    <div class="book-stage">
-      <div class="book book-1">
-        <div class="book-cover">
-          <span class="book-title">CHÌA KHÓA<br>TỰ DO</span>
-          <span class="book-sub">Phụ Nữ x AI</span>
-          <div class="book-art"><div class="door"></div><div class="silhouette"></div></div>
-        </div>
-        <div class="book-spine"></div>
-      </div>
-
-      <div class="book-pile">
-        <div class="book book-stack" style="--i:0">
-          <div class="book-cover mini">
-            <span class="book-title">CHÌA KHÓA<br>TỰ DO</span>
-            <span class="book-sub">Phụ Nữ x AI</span>
-          </div>
-        </div>
-        <div class="book book-stack" style="--i:1">
-          <div class="book-cover mini">
-            <span class="book-title">CHÌA KHÓA<br>TỰ DO</span>
-            <span class="book-sub">Phụ Nữ x AI</span>
-          </div>
-        </div>
-        <div class="book book-stack" style="--i:2">
-          <div class="book-cover mini">
-            <span class="book-title">CHÌA KHÓA<br>TỰ DO</span>
-            <span class="book-sub">Phụ Nữ x AI</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="book book-center">
-        <div class="book-cover">
-          <span class="book-title">CHÌA KHÓA<br>TỰ DO</span>
-          <span class="book-sub">Phụ Nữ x AI</span>
-          <div class="book-art large"><div class="door"></div><div class="silhouette"></div></div>
-        </div>
-        <div class="book-spine"></div>
-      </div>
-
-      <div class="book book-3">
-        <div class="book-cover">
-          <span class="book-title">CHÌA KHÓA<br>TỰ DO</span>
-          <span class="book-sub">Phụ Nữ x AI</span>
-          <div class="book-art"><div class="door"></div><div class="silhouette"></div></div>
-        </div>
-        <div class="book-spine"></div>
-      </div>
-
-      <div class="book book-4">
-        <div class="book-cover flip">
-          <p class="flip-q">Bạn đang sống…<br>hay chỉ đang tồn tại?</p>
-          <span class="flip-foot">HƯƠNG VÕ AI</span>
-        </div>
-        <div class="book-spine"></div>
-      </div>
+    <div class="hero-book">
+      <video class="hero-book-video" id="heroVideo" poster="img/books-hero.jpg" preload="none" playsinline>
+        <source src="img/books-hero-video.mp4" type="video/mp4">
+      </video>
+      <button class="video-play-btn" id="heroVideoPlay" type="button" aria-label="Phát video">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.45)"/><path d="M9.5 7.5l7 4.5-7 4.5v-9z" fill="#fff"/></svg>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- 5 KEYS -->
-<section class="keys" id="keys">
+<!-- AUTHOR STRIP -->
+<section class="author-strip">
   <div class="section-inner">
-    <span class="eyebrow">Bên trong bộ combo</span>
-    <h2>5 Cánh Cửa Đưa Bạn Đến Tự Do</h2>
-    <p class="section-sub">Mỗi cuốn sách là một chìa khóa, mở ra một tầng năng lực mới trên hành trình xây dựng thu nhập tự động.</p>
+    <div class="author-strip-inner">
+      <img class="strip-avatar" src="img/author-avatar.png" alt="Tác giả Hương Võ">
+      <div class="strip-text">
+        <span class="strip-name">Hương Võ</span><br>
+        <span class="strip-role" data-i18n="strip_role">Đại Sứ Thương Hiệu của các AI tại Việt Nam</span>
+      </div>
+    </div>
+    <div class="partner-list">
+      <span class="partner-pill">Lumeflow AI</span>
+      <span class="partner-pill">Minimax Audio</span>
+      <span class="partner-pill">Seedance 2</span>
+      <span class="partner-pill">Higgsfield AI</span>
+      <span class="partner-pill">TopView AI</span>
+      <span class="partner-pill">Focusee AI</span>
+      <span class="partner-pill">Lovable AI</span>
+      <span class="partner-pill">Claude AI</span>
+      <span class="partner-pill">GPT Image 2</span>
+      <span class="partner-pill">Gemini Omni</span>
+      <span class="partner-pill">Afftor</span>
+      <span class="partner-pill">Runway</span>
+    </div>
+  </div>
+</section>
 
-    <div class="key-grid">
-      <div class="key-card">
-        <span class="key-num">01</span>
-        <h3>Tư Duy Tự Do</h3>
-        <p>Phá bỏ giới hạn niềm tin, xây nền tảng tư duy của người làm chủ cuộc chơi Affiliate.</p>
+<!-- 5 DOORS -->
+<section class="doors" id="keys">
+  <div class="section-inner text-center">
+    <span class="eyebrow" data-i18n="doors_eyebrow">5 Cánh Cửa</span>
+    <h2 data-i18n="doors_heading">Mỗi cánh cửa là một <em class="italic-gold">phiên bản tự do</em> của bạn</h2>
+  </div>
+  <div class="section-inner">
+    <div class="door-grid">
+      <div class="door-card">
+        <span class="door-num">01</span>
+        <h3 data-i18n="door1_title">Làm Chủ Bản Thân</h3>
+        <p data-i18n="door1_desc">Định vị giá trị, tài chính và lựa chọn của chính mình — không lệ thuộc.</p>
+        <a class="door-link" href="canh-cua/ban-than.html" data-i18n="door_link">Đọc chi tiết →</a>
       </div>
-      <div class="key-card">
-        <span class="key-num">02</span>
-        <h3>Nền Tảng Affiliate</h3>
-        <p>Hiểu bản chất mô hình tiếp thị liên kết và cách chọn ngách sinh lời bền vững.</p>
+      <div class="door-card">
+        <span class="door-num">02</span>
+        <h3 data-i18n="door2_title">Làm Chủ Tư Duy</h3>
+        <p data-i18n="door2_desc">Hệ tư duy của người phụ nữ hiện đại trong thời đại biến động.</p>
+        <a class="door-link" href="canh-cua/tu-duy.html" data-i18n="door_link">Đọc chi tiết →</a>
       </div>
-      <div class="key-card">
-        <span class="key-num">03</span>
-        <h3>Sức Mạnh AI</h3>
-        <p>Dùng AI để tạo nội dung, kịch bản và quảng cáo nhanh gấp 10 lần cách làm truyền thống.</p>
+      <div class="door-card">
+        <span class="door-num">03</span>
+        <h3 data-i18n="door3_title">Làm Chủ Công Nghệ</h3>
+        <p data-i18n="door3_desc">Biến AI thành trợ lý 24/7 — viết, thiết kế, kinh doanh, học tập.</p>
+        <a class="door-link" href="canh-cua/cong-nghe.html" data-i18n="door_link">Đọc chi tiết →</a>
       </div>
-      <div class="key-card">
-        <span class="key-num">04</span>
-        <h3>Hệ Thống Tự Động</h3>
-        <p>Xây phễu bán hàng và quy trình vận hành chạy tự động, không phụ thuộc thời gian của bạn.</p>
+      <div class="door-card">
+        <span class="door-num">04</span>
+        <h3 data-i18n="door4_title">Làm Chủ Sự Nghiệp</h3>
+        <p data-i18n="door4_desc">Xây dựng thương hiệu cá nhân và dòng thu nhập tự động.</p>
+        <a class="door-link" href="canh-cua/su-nghiep.html" data-i18n="door_link">Đọc chi tiết →</a>
       </div>
-      <div class="key-card">
-        <span class="key-num">05</span>
-        <h3>Cộng Đồng Đối Tác</h3>
-        <p>Kết nối cộng đồng đối tác cùng chí hướng, nhân bản thành công cùng nhau.</p>
-      </div>
-      <div class="key-card key-card-cta">
-        <h3>Sẵn sàng mở cánh cửa đầu tiên?</h3>
-        <a href="#pricing" class="btn btn-primary btn-sm">Nhận Combo Ngay</a>
+      <div class="door-card">
+        <span class="door-num">05</span>
+        <h3 data-i18n="door5_title">Làm Chủ Cuộc Đời</h3>
+        <p data-i18n="door5_desc">Tự do thời gian, tự do tài chính, tự do là chính mình.</p>
+        <a class="door-link" href="canh-cua/cuoc-doi.html" data-i18n="door_link">Đọc chi tiết →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
-<section class="stats" id="san-pham">
-  <div class="section-inner stats-grid">
-    <div class="stat"><span class="stat-num">10,000+</span><span class="stat-label">Học viên tham gia</span></div>
-    <div class="stat"><span class="stat-num">5</span><span class="stat-label">Cuốn sách trong bộ combo</span></div>
-    <div class="stat"><span class="stat-num">4.9/5</span><span class="stat-label">Đánh giá trung bình</span></div>
-    <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Hỗ trợ cộng đồng</span></div>
+<section class="stats-bar">
+  <div class="section-inner">
+    <div class="stats-grid">
+      <div class="stat-item"><span class="stat-num">1000+</span><span class="stat-label" data-i18n="stat1_label">Phụ nữ đã mở khóa</span></div>
+      <div class="stat-item"><span class="stat-num">5</span><span class="stat-label" data-i18n="stat2_label">Cánh cửa tự do</span></div>
+      <div class="stat-item"><span class="stat-num">30</span><span class="stat-label" data-i18n="stat3_label">Ngày hoàn tiền</span></div>
+      <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-label" data-i18n="stat4_label">Hỗ trợ qua Zalo</span></div>
+    </div>
   </div>
 </section>
 
-<!-- AUTHOR -->
-<section class="author" id="hoc-vien">
-  <div class="section-inner author-inner">
-    <div class="author-avatar">HV</div>
-    <div class="author-content">
-      <span class="eyebrow">Người xây dựng hệ thống</span>
-      <h2>Hương Võ AI</h2>
-      <p>Người sáng lập hệ thống học Affiliate x AI, đồng hành cùng hàng nghìn học viên xây dựng
-      nguồn thu nhập tự động từ con số 0. Sứ mệnh: giúp người Việt làm chủ công nghệ AI để tạo ra
-      tự do tài chính và tự do thời gian.</p>
-      <div class="social-links">
-        <a href="#" class="social-btn">YouTube</a>
-        <a href="#" class="social-btn">Facebook</a>
-        <a href="#" class="social-btn">TikTok</a>
-        <a href="#" class="social-btn">Zalo</a>
+<!-- GETTING STARTED -->
+<section class="steps-section" id="bat-dau">
+  <div class="section-inner text-center">
+    <span class="eyebrow" data-i18n="steps_eyebrow">Người mới bắt đầu</span>
+    <h2 data-i18n="steps_heading">Hành trình của bạn — bắt đầu hôm nay</h2>
+    <p class="section-sub" data-i18n="steps_sub">Không cần kinh nghiệm, không cần biết code. Chỉ cần một quyết định.</p>
+  </div>
+  <div class="section-inner">
+    <div class="start-steps">
+      <div class="start-step">
+        <span class="start-num">01</span>
+        <h3 data-i18n="step1_title">Đăng ký nhận ưu đãi</h3>
+        <p data-i18n="step1_desc">Để lại tên và số điện thoại — nhận ngay ưu đãi ra mắt Chìa Khóa Tự Do.</p>
       </div>
+      <div class="start-step">
+        <span class="start-num">02</span>
+        <h3 data-i18n="step2_title">Chọn cánh cửa của bạn</h3>
+        <p data-i18n="step2_desc">5 cánh cửa — bắt đầu với điều bạn cần nhất ngay lúc này.</p>
+      </div>
+      <div class="start-step">
+        <span class="start-num">03</span>
+        <h3 data-i18n="step3_title">Làm chủ cuộc đời cùng AI</h3>
+        <p data-i18n="step3_desc">Biến kiến thức thành hành động — và hành động thành tự do thật sự.</p>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:40px;">
+      <button type="button" class="btn btn-primary js-open-register" data-i18n="steps_cta">Bắt Đầu Ngay — Miễn Phí</button>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+  <div class="section-inner">
+    <span class="quote-mark">"</span>
+    <p class="quote-text" data-i18n="quote_text">
+      Bản lĩnh phụ nữ ngày nay,<br>
+      xưa thời giữ nước, tự hào cản gì công nghệ.<br>
+      Làm chủ cuộc sống, dựng xây phong trào,<br>
+      nay thời số hóa, đỉnh cao dẫn đầu.
+    </p>
+    <span class="quote-attr">— Hương Võ AI</span>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio-section">
+  <div class="section-inner bio-inner">
+    <span class="eyebrow" data-i18n="bio_eyebrow">Người viết nên Chìa Khóa Tự Do</span>
+    <h2>Hương Võ AI</h2>
+    <p data-i18n="bio_p1">Một người phụ nữ Việt hiện đại — đi qua thất bại, làm lại từ con số 0, và khám phá ra rằng tự do không nằm ở việc có bao nhiêu lựa chọn, mà ở việc có đủ dữ liệu để tạo ra lựa chọn cho chính mình.</p>
+    <p data-i18n="bio_p2">Sau 10 năm xây dựng thương hiệu cá nhân và làm việc cùng AI, cô viết "Chìa Khóa Tự Do" như một lời mời: đừng chờ ai cho phép, hãy tự mở cánh cửa của chính mình.</p>
+  </div>
+</section>
+
+<!-- AFFILIATE -->
+<section class="affiliate-teaser" id="affiliate">
+  <div class="section-inner">
+    <button class="affiliate-toggle" id="affiliateToggle" type="button">
+      <span data-i18n="aff_toggle">🤝 Chương Trình Cộng Tác Viên — Kiếm thu nhập cùng Hương Võ</span>
+      <span class="arrow">→</span>
+    </button>
+    <div class="affiliate-panel" id="affiliatePanel">
+      <div class="affiliate-grid">
+        <div class="affiliate-tier">
+          <span class="affiliate-percent">30%</span>
+          <h4 data-i18n="aff1_title">Sách / Ebook / Audiobook</h4>
+          <p data-i18n="aff1_text">Nhận ngay 30% giá trị đơn hàng cho mỗi khách bạn giới thiệu mua sách giấy, ebook hoặc audiobook.</p>
+        </div>
+        <div class="affiliate-tier featured">
+          <span class="affiliate-percent">50%</span>
+          <h4 data-i18n="aff2_title">Khóa học / Combo Trọn Bộ</h4>
+          <p data-i18n="aff2_text">Hoa hồng lên đến 50% giá trị đơn hàng khi khách đăng ký Khóa học Phụ Nữ x AI hoặc Combo Trọn Bộ.</p>
+        </div>
+      </div>
+      <div id="affiliateCta"><button type="button" class="btn btn-primary js-open-register" data-i18n="aff_cta">Đăng Ký Làm Cộng Tác Viên</button></div>
+      <p class="affiliate-note" data-i18n="aff_note">Hoa hồng được đối soát và thanh toán hàng tuần qua chuyển khoản ngân hàng.</p>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials">
+<section class="testimonials-section">
+  <div class="section-inner text-center">
+    <span class="eyebrow" data-i18n="test_eyebrow">Chị em đã đi cùng</span>
+    <h2 data-i18n="test_heading">Họ đã mở cánh cửa — đến lượt bạn</h2>
+  </div>
   <div class="section-inner">
-    <span class="eyebrow">Học viên nói gì</span>
-    <h2>Câu Chuyện Từ Cộng Đồng</h2>
-
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p>“Sau 3 tháng áp dụng hệ thống trong sách, mình đã có nguồn thu nhập thụ động đầu tiên trong đời.”</p>
-        <span class="testi-name">— Học viên, TP.HCM</span>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <span class="testimonial-heart">♡</span>
+        <p class="testimonial-text" data-i18n="test1_text">"Tưởng AI khó lắm. Học 3 buổi là tôi tự viết được nội dung bán hàng cho shop nhà mình."</p>
+        <div class="testimonial-name">Chị Lan, 42</div>
+        <div class="testimonial-meta" data-i18n="test1_meta">Mẹ 2 con · Hà Nội</div>
       </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p>“Phần dùng AI để tạo nội dung tiết kiệm cho mình rất nhiều thời gian, hiệu quả hơn hẳn cách làm cũ.”</p>
-        <span class="testi-name">— Học viên, Hà Nội</span>
+      <div class="testimonial-card">
+        <span class="testimonial-heart">♡</span>
+        <p class="testimonial-text" data-i18n="test2_text">"Lần đầu thấy phụ nữ trung niên được trân trọng đến vậy. Tôi tự tin hẳn lên."</p>
+        <div class="testimonial-name">Chị Mai, 45</div>
+        <div class="testimonial-meta" data-i18n="test2_meta">Giáo viên · Đà Nẵng</div>
       </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p>“Cộng đồng đối tác rất nhiệt tình hỗ trợ, không cảm giác đơn độc khi mới bắt đầu.”</p>
-        <span class="testi-name">— Học viên, Đà Nẵng</span>
+      <div class="testimonial-card">
+        <span class="testimonial-heart">♡</span>
+        <p class="testimonial-text" data-i18n="test3_text">"Chỉ cần dám bắt đầu. Đọc xong cuốn sách tôi hiểu — giặc còn vượt được, huống hồ cái này."</p>
+        <div class="testimonial-name">Chị Yến, 39</div>
+        <div class="testimonial-meta" data-i18n="test3_meta">Kế toán · TP.HCM</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-heart">♡</span>
+        <p class="testimonial-text" data-i18n="test4_text">"AI viết caption bán hàng hay hơn cả tôi tưởng. Đơn về đều mỗi ngày."</p>
+        <div class="testimonial-name">Chị Hoa, 47</div>
+        <div class="testimonial-meta" data-i18n="test4_meta">Chủ tiệm áo dài · Huế</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-heart">♡</span>
+        <p class="testimonial-text" data-i18n="test5_text">"Từ ngày biết dùng AI, tôi làm 1 ngày bằng cả tuần trước đây."</p>
+        <div class="testimonial-name">Chị Thảo, 41</div>
+        <div class="testimonial-meta" data-i18n="test5_meta">Freelancer · TP.HCM</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-heart">♡</span>
+        <p class="testimonial-text" data-i18n="test6_text">"Chồng con ngỡ ngàng khi thấy mẹ tự mở một dòng thu nhập mới, đàng hoàng."</p>
+        <div class="testimonial-name">Chị Nga, 44</div>
+        <div class="testimonial-meta" data-i18n="test6_meta">Nội trợ · Bình Dương</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="section-inner pricing-inner">
-    <div class="pricing-card">
-      <span class="badge badge-static">✨ Ưu đãi có thời hạn</span>
-      <h2>Combo 5 Chìa Khóa Tự Do</h2>
-      <p class="pricing-desc">Trọn bộ 5 cuốn sách + hệ thống bài học Affiliate x AI + cộng đồng đối tác.</p>
-      <div class="price-row">
-        <span class="price-old">1.189.000đ</span>
-        <span class="price-new">686.000đ</span>
-      </div>
-      <ul class="pricing-list">
-        <li>Trọn bộ 5 cuốn sách Chìa Khóa Tự Do (bản in + PDF)</li>
-        <li>Hệ thống bài giảng Affiliate x AI trọn đời</li>
-        <li>Truy cập cộng đồng đối tác riêng tư</li>
-        <li>Cập nhật nội dung mới miễn phí</li>
-      </ul>
-      <a href="#doi-tac" class="btn btn-primary btn-block">Đặt Sách &amp; Nhận Mật Mã</a>
-      <p class="pricing-note">Thanh toán an toàn · Hỗ trợ 24/7</p>
-    </div>
-
-    <div class="pricing-card alt">
-      <span class="badge badge-static">🚀 Chương trình nâng cao</span>
-      <h2>KOL AI NETWORK</h2>
-      <p class="pricing-desc">Mạng lưới KOL AI dành cho đối tác muốn xây dựng thương hiệu cá nhân và mở rộng hệ thống Affiliate x AI ở quy mô lớn hơn.</p>
-      <ul class="pricing-list">
-        <li>Đào tạo xây dựng thương hiệu cá nhân cùng AI</li>
-        <li>Kết nối mạng lưới KOL &amp; đối tác chiến lược</li>
-        <li>Hỗ trợ 1:1 từ đội ngũ chuyên gia</li>
-        <li>Ưu tiên tiếp cận các chiến dịch hợp tác mới</li>
-      </ul>
-      <a href="#doi-tac" class="btn btn-ghost btn-block">Liên Hệ Tư Vấn</a>
-      <p class="pricing-note">Số lượng thành viên giới hạn mỗi đợt</p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="doi-tac">
+<!-- FINAL CTA -->
+<section class="final-cta" id="mua">
   <div class="section-inner">
-    <span class="eyebrow">Giải đáp</span>
-    <h2>Câu Hỏi Thường Gặp</h2>
-
-    <div class="faq-list" id="faqList">
-      <div class="faq-item open">
-        <button class="faq-q">Tôi cần kinh nghiệm gì trước khi bắt đầu không? <span class="faq-icon">＋</span></button>
-        <div class="faq-a"><p>Không. Hệ thống được thiết kế từ cơ bản đến nâng cao, phù hợp cho cả người mới bắt đầu.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Tôi nhận được gì sau khi đặt Combo? <span class="faq-icon">＋</span></button>
-        <div class="faq-a"><p>Bạn nhận trọn bộ 5 cuốn sách, mật mã kích hoạt khóa học, và quyền truy cập cộng đồng đối tác.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Làm sao để trở thành Đối Tác? <span class="faq-icon">＋</span></button>
-        <div class="faq-a"><p>Sau khi hoàn tất Combo, bạn có thể đăng ký chương trình Đối Tác trong khu học viện.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Ưu đãi countdown có áp dụng mãi không? <span class="faq-icon">＋</span></button>
-        <div class="faq-a"><p>Không, đây là ưu đãi giới hạn thời gian dành cho học viên đăng ký sớm.</p></div>
-      </div>
+    <h2 data-i18n="final_heading">Cánh cửa đã mở. Bạn bước vào chứ?</h2>
+    <p class="final-cta-desc" data-i18n="final_desc">Nhận trọn bộ "Chìa Khóa Tự Do" — sách giấy, ebook, audiobook và khóa học AI dành riêng cho phụ nữ.</p>
+    <a href="san-pham.html" class="btn btn-primary" data-i18n="final_btn">Mở Khóa Chìa Khóa Tự Do</a>
+    <div class="trust-badges">
+      <span class="trust-badge" data-i18n="trust1">Bảo đảm hoàn tiền 30 ngày</span>
+      <span class="trust-badge" data-i18n="trust2">Giao toàn quốc</span>
     </div>
   </div>
 </section>
@@ -309,26 +319,192 @@
 <footer class="footer">
   <div class="section-inner footer-inner">
     <div class="footer-col footer-brand">
-      <span class="logo">Hương Võ AI</span>
-      <p>Hệ thống học Affiliate x AI — mở ra cánh cửa tự do tài chính cho người Việt.</p>
+      <span class="logo">Hương Võ</span>
+      <p data-i18n="footer_desc">Chìa Khóa Tự Do — hệ thống sách &amp; khóa học giúp phụ nữ hiện đại làm chủ cuộc đời cùng AI.</p>
     </div>
     <div class="footer-col">
-      <h4>Điều hướng</h4>
-      <a href="#top">Trang chủ</a>
-      <a href="#hoc-vien">Học Viện</a>
-      <a href="#san-pham">Sản Phẩm</a>
-      <a href="#doi-tac">Đối Tác</a>
+      <h4 data-i18n="footer_nav">Điều hướng</h4>
+      <a href="index.html" data-i18n="nav_home">Trang chủ</a>
+      <a href="triet-ly.html" data-i18n="nav_triet_ly">Triết Lý Cuộc Sống</a>
+      <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
+      <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
     </div>
     <div class="footer-col">
-      <h4>Liên hệ</h4>
+      <h4 data-i18n="footer_contact">Liên hệ</h4>
+      <a href="https://zalo.me/0582364021" target="_blank" rel="noopener">Zalo: 0582 364 021</a>
       <a href="tel:+840582364021">0582 364 021</a>
-      <a href="mailto:contact@example.com">contact@example.com</a>
-      <span>Hỗ trợ 24/7</span>
+      <span data-i18n="footer_support">Hỗ trợ 24/7 qua Zalo</span>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Hương Võ AI. Bản mẫu giao diện — vui lòng thay nội dung thật trước khi sử dụng chính thức.</div>
+  <div class="footer-bottom" data-i18n="footer_bottom">© 2026 Chìa Khóa Tự Do. Đã đăng ký bản quyền.</div>
 </footer>
 
+<!-- ZALO FLOAT -->
+<a class="zalo-float" href="https://zalo.me/0582364021" target="_blank" rel="noopener" aria-label="Chat Zalo 0582364021" title="Chat Zalo: 0582 364 021">
+  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C12.95 4 4 12.06 4 22c0 5.6 2.86 10.6 7.34 13.9-.24 2-.9 4.6-2.34 6.6 2.9-.4 6.1-1.7 8.4-3.3 2 .5 4.2.8 6.6.8 11.05 0 20-8.06 20-18S35.05 4 24 4z" fill="#1b120d"/></svg>
+</a>
+
+<!-- REGISTER MODAL -->
+<div class="modal-overlay" id="registerModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Đóng">×</button>
+    <h3 data-i18n="reg_title">Đăng Ký Miễn Phí</h3>
+    <p class="modal-sub" data-i18n="reg_sub">Tạo tài khoản để lưu tiến trình đọc và nhận ưu đãi Chìa Khóa Tự Do.</p>
+    <form id="registerForm">
+      <div class="form-field">
+        <label data-i18n="reg_name">Họ và tên</label>
+        <input type="text" id="regName" required>
+      </div>
+      <div class="form-field">
+        <label data-i18n="reg_phone">Số điện thoại</label>
+        <input type="tel" id="regPhone" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="reg_submit">Đăng Ký Ngay</button>
+    </form>
+    <p class="form-note" data-i18n="reg_note">Miễn phí · Không cần thẻ tín dụng</p>
+  </div>
+</div>
+
+<script>
+window.PAGE_I18N = {
+  vi: {
+    hero_badge: '✨ CHÌA KHÓA TỰ DO — Phụ Nữ AI',
+    hero_title: '5 Cánh Cửa <span class="orange">Định Mệnh</span><br>Phụ Nữ Làm Chủ Cuộc Đời <span class="gold">x AI</span><br>Mở Ra <span class="gold script">Cánh Cửa Tự Do</span>',
+    hero_sub: 'Đường đời muôn nẻo đổi thay,<br>AI góp sức dựng xây tháng ngày.<br><br>Giặc còn vượt gió băng mây,<br>Huống chi tự viết tương lai của mình.',
+    hero_cta1: 'Mở Khóa Ngay',
+    hero_cta2: 'Đọc Thử Miễn Phí',
+    strip_role: 'Đại Sứ Thương Hiệu của các AI tại Việt Nam',
+    doors_eyebrow: '5 Cánh Cửa',
+    doors_heading: 'Mỗi cánh cửa là một <em class="italic-gold">phiên bản tự do</em> của bạn',
+    door1_title: 'Làm Chủ Bản Thân',
+    door1_desc: 'Định vị giá trị, tài chính và lựa chọn của chính mình — không lệ thuộc.',
+    door2_title: 'Làm Chủ Tư Duy',
+    door2_desc: 'Hệ tư duy của người phụ nữ hiện đại trong thời đại biến động.',
+    door3_title: 'Làm Chủ Công Nghệ',
+    door3_desc: 'Biến AI thành trợ lý 24/7 — viết, thiết kế, kinh doanh, học tập.',
+    door4_title: 'Làm Chủ Sự Nghiệp',
+    door4_desc: 'Xây dựng thương hiệu cá nhân và dòng thu nhập tự động.',
+    door5_title: 'Làm Chủ Cuộc Đời',
+    door5_desc: 'Tự do thời gian, tự do tài chính, tự do là chính mình.',
+    door_link: 'Đọc chi tiết →',
+    stat1_label: 'Phụ nữ đã mở khóa',
+    stat2_label: 'Cánh cửa tự do',
+    stat3_label: 'Ngày hoàn tiền',
+    stat4_label: 'Hỗ trợ qua Zalo',
+    steps_eyebrow: 'Người mới bắt đầu',
+    steps_heading: 'Hành trình của bạn — bắt đầu hôm nay',
+    steps_sub: 'Không cần kinh nghiệm, không cần biết code. Chỉ cần một quyết định.',
+    step1_title: 'Đăng ký nhận ưu đãi',
+    step1_desc: 'Để lại tên và số điện thoại — nhận ngay ưu đãi ra mắt Chìa Khóa Tự Do.',
+    step2_title: 'Chọn cánh cửa của bạn',
+    step2_desc: '5 cánh cửa — bắt đầu với điều bạn cần nhất ngay lúc này.',
+    step3_title: 'Làm chủ cuộc đời cùng AI',
+    step3_desc: 'Biến kiến thức thành hành động — và hành động thành tự do thật sự.',
+    steps_cta: 'Bắt Đầu Ngay — Miễn Phí',
+    aff_toggle: '🤝 Chương Trình Cộng Tác Viên — Kiếm thu nhập cùng Hương Võ',
+    aff1_title: 'Sách / Ebook / Audiobook',
+    aff1_text: 'Nhận ngay 30% giá trị đơn hàng cho mỗi khách bạn giới thiệu mua sách giấy, ebook hoặc audiobook.',
+    aff2_title: 'Khóa học / Combo Trọn Bộ',
+    aff2_text: 'Hoa hồng lên đến 50% giá trị đơn hàng khi khách đăng ký Khóa học Phụ Nữ x AI hoặc Combo Trọn Bộ.',
+    aff_cta: 'Đăng Ký Làm Cộng Tác Viên',
+    aff_note: 'Hoa hồng được đối soát và thanh toán hàng tuần qua chuyển khoản ngân hàng.',
+    aff_copy_link: 'Sao chép link',
+    aff_link_note: 'Đây là link giới thiệu riêng của bạn. Chia sẻ link này — mọi khách đặt hàng qua link sẽ được ghi nhận cho bạn.',
+    test_eyebrow: 'Chị em đã đi cùng',
+    test_heading: 'Họ đã mở cánh cửa — đến lượt bạn',
+    test1_text: '"Tưởng AI khó lắm. Học 3 buổi là tôi tự viết được nội dung bán hàng cho shop nhà mình."',
+    test1_meta: 'Mẹ 2 con · Hà Nội',
+    test2_text: '"Lần đầu thấy phụ nữ trung niên được trân trọng đến vậy. Tôi tự tin hẳn lên."',
+    test2_meta: 'Giáo viên · Đà Nẵng',
+    test3_text: '"Chỉ cần dám bắt đầu. Đọc xong cuốn sách tôi hiểu — giặc còn vượt được, huống hồ cái này."',
+    test3_meta: 'Kế toán · TP.HCM',
+    test4_text: '"AI viết caption bán hàng hay hơn cả tôi tưởng. Đơn về đều mỗi ngày."',
+    test4_meta: 'Chủ tiệm áo dài · Huế',
+    test5_text: '"Từ ngày biết dùng AI, tôi làm 1 ngày bằng cả tuần trước đây."',
+    test5_meta: 'Freelancer · TP.HCM',
+    test6_text: '"Chồng con ngỡ ngàng khi thấy mẹ tự mở một dòng thu nhập mới, đàng hoàng."',
+    test6_meta: 'Nội trợ · Bình Dương',
+    quote_text: 'Bản lĩnh phụ nữ ngày nay,<br>xưa thời giữ nước, tự hào cản gì công nghệ.<br>Làm chủ cuộc sống, dựng xây phong trào,<br>nay thời số hóa, đỉnh cao dẫn đầu.',
+    bio_eyebrow: 'Người viết nên Chìa Khóa Tự Do',
+    bio_p1: 'Một người phụ nữ Việt hiện đại — đi qua thất bại, làm lại từ con số 0, và khám phá ra rằng tự do không nằm ở việc có bao nhiêu lựa chọn, mà ở việc có đủ dữ liệu để tạo ra lựa chọn cho chính mình.',
+    bio_p2: 'Sau 10 năm xây dựng thương hiệu cá nhân và làm việc cùng AI, cô viết "Chìa Khóa Tự Do" như một lời mời: đừng chờ ai cho phép, hãy tự mở cánh cửa của chính mình.',
+    final_heading: 'Cánh cửa đã mở. Bạn bước vào chứ?',
+    final_desc: 'Nhận trọn bộ "Chìa Khóa Tự Do" — sách giấy, ebook, audiobook và khóa học AI dành riêng cho phụ nữ.',
+    final_btn: 'Mở Khóa Chìa Khóa Tự Do',
+    trust1: 'Bảo đảm hoàn tiền 30 ngày',
+    trust2: 'Giao toàn quốc',
+  },
+  en: {
+    hero_badge: '✨ THE FREEDOM KEY — Women x AI',
+    hero_title: '5 Doors of <span class="orange">Destiny</span><br>Women Mastering Life <span class="gold">x AI</span><br>Opening the <span class="gold script">Door of Freedom</span>',
+    hero_sub: 'Life\'s many roads keep changing course,<br>AI lends its strength to build each day.<br><br>Storms once crossed with wind and cloud,<br>How much more, to write your own future.',
+    hero_cta1: 'Unlock Now',
+    hero_cta2: 'Read a Free Sample',
+    strip_role: 'Brand Ambassador for AI Platforms in Vietnam',
+    doors_eyebrow: '5 Doors',
+    doors_heading: 'Each door is a <em class="italic-gold">free version</em> of you',
+    door1_title: 'Master Yourself',
+    door1_desc: 'Define your own worth, finances and choices — without depending on anyone.',
+    door2_title: 'Master Your Mindset',
+    door2_desc: 'The mindset of the modern woman in a fast-changing era.',
+    door3_title: 'Master Technology',
+    door3_desc: 'Turn AI into a 24/7 assistant — for writing, design, business and learning.',
+    door4_title: 'Master Your Career',
+    door4_desc: 'Build a personal brand and an automated income stream.',
+    door5_title: 'Master Your Life',
+    door5_desc: 'Freedom of time, freedom of finance, freedom to be yourself.',
+    door_link: 'Read more →',
+    stat1_label: 'Women already unlocked',
+    stat2_label: 'Doors of freedom',
+    stat3_label: 'Day money-back',
+    stat4_label: 'Support via Zalo',
+    steps_eyebrow: 'New here?',
+    steps_heading: 'Your journey — starts today',
+    steps_sub: 'No experience needed, no coding required. Just one decision.',
+    step1_title: 'Register for launch offers',
+    step1_desc: 'Leave your name and phone number — get the Freedom Key launch offer instantly.',
+    step2_title: 'Choose your door',
+    step2_desc: '5 doors — start with whatever you need most right now.',
+    step3_title: 'Master your life with AI',
+    step3_desc: 'Turn knowledge into action — and action into real freedom.',
+    steps_cta: 'Start Now — Free',
+    aff_toggle: '🤝 Affiliate Program — Earn income with Hương Võ',
+    aff1_title: 'Book / Ebook / Audiobook',
+    aff1_text: 'Get 30% of the order value for every customer you refer who buys the print book, ebook or audiobook.',
+    aff2_title: 'Course / Complete Combo',
+    aff2_text: 'Earn up to 50% of the order value when a referral signs up for the Women x AI Course or the Complete Combo.',
+    aff_cta: 'Become an Affiliate Partner',
+    aff_note: 'Commissions are reconciled and paid weekly via bank transfer.',
+    aff_copy_link: 'Copy link',
+    aff_link_note: 'This is your personal referral link. Share it — any order placed through it will be credited to you.',
+    test_eyebrow: 'Women who joined',
+    test_heading: 'They opened the door — your turn',
+    test1_text: '"I thought AI would be hard. After 3 lessons I could write my own sales content for my shop."',
+    test1_meta: 'Mother of 2 · Hanoi',
+    test2_text: '"For the first time I felt a middle-aged woman being truly respected. My confidence grew."',
+    test2_meta: 'Teacher · Da Nang',
+    test3_text: '"Just dare to start. After reading the book I understood — I survived wartime, this is nothing."',
+    test3_meta: 'Accountant · Ho Chi Minh City',
+    test4_text: '"AI writes better sales captions than I expected. Orders come in every day now."',
+    test4_meta: 'Áo dài shop owner · Hue',
+    test5_text: '"Since learning AI, I do in one day what used to take a week."',
+    test5_meta: 'Freelancer · Ho Chi Minh City',
+    test6_text: '"My husband and kids were amazed to see me open a new, respectable income stream on my own."',
+    test6_meta: 'Homemaker · Binh Duong',
+    quote_text: 'A woman\'s courage today,<br>once she defended her homeland, unafraid of any technology.<br>Mastering life, building movements,<br>now in the digital age, leading from the top.',
+    bio_eyebrow: 'The woman behind The Freedom Key',
+    bio_p1: 'A modern Vietnamese woman — who went through failure, started over from zero, and discovered that freedom isn\'t about how many choices you have, but about having enough data to create choices for yourself.',
+    bio_p2: 'After 10 years building a personal brand and working with AI, she wrote "The Freedom Key" as an invitation: don\'t wait for permission — open your own door.',
+    final_heading: 'The door is open. Will you step in?',
+    final_desc: 'Get the full "Freedom Key" set — print book, ebook, audiobook and an AI course made for women.',
+    final_btn: 'Unlock The Freedom Key',
+    trust1: '30-day money-back guarantee',
+    trust2: 'Nationwide delivery',
+  }
+};
+</script>
 <script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

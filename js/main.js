@@ -2,8 +2,8 @@
 // Persists a deadline in localStorage so the countdown survives reloads
 // but resets to a fresh window once it expires.
 (function initCountdown(){
-  const STORAGE_KEY = 'promoDeadline';
-  const DURATION_MS = (2 * 24 * 60 * 60 + 23 * 60 * 60 + 58 * 60 + 56) * 1000; // 2d 23h 58m 56s
+  const STORAGE_KEY = 'hvPromoDeadline';
+  const DURATION_MS = (372 * 24 * 60 * 60 + 12 * 60 * 60 + 33 * 60 + 58) * 1000;
 
   let deadline = Number(localStorage.getItem(STORAGE_KEY));
   if (!deadline || deadline < Date.now()) {
@@ -17,6 +17,7 @@
     mins: document.getElementById('cd-mins'),
     secs: document.getElementById('cd-secs'),
   };
+  if (!els.days) return;
 
   function pad(n){ return String(n).padStart(2, '0'); }
 
@@ -27,10 +28,10 @@
     const mins = Math.floor((diff % 3600000) / 60000);
     const secs = Math.floor((diff % 60000) / 1000);
 
-    if (els.days) els.days.textContent = pad(days);
-    if (els.hours) els.hours.textContent = pad(hours);
-    if (els.mins) els.mins.textContent = pad(mins);
-    if (els.secs) els.secs.textContent = pad(secs);
+    els.days.textContent = days;
+    els.hours.textContent = pad(hours);
+    els.mins.textContent = pad(mins);
+    els.secs.textContent = pad(secs);
 
     if (diff <= 0) {
       localStorage.removeItem(STORAGE_KEY);
@@ -57,26 +58,42 @@
   });
 })();
 
-// ---------- Language switch (visual only) ----------
-(function initLangSwitch(){
-  const buttons = document.querySelectorAll('.lang-btn');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
+// ---------- Philosophy card accordion (triet-ly page) ----------
+(function initPhiCards(){
+  document.querySelectorAll('.phi-card').forEach(card => {
+    const toggle = card.querySelector('.phi-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', () => card.classList.toggle('open'));
   });
 })();
 
-// ---------- FAQ accordion ----------
-(function initFaq(){
-  const items = document.querySelectorAll('.faq-item');
-  items.forEach(item => {
-    const question = item.querySelector('.faq-q');
-    question.addEventListener('click', () => {
-      const wasOpen = item.classList.contains('open');
-      items.forEach(i => i.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
-    });
+// ---------- Affiliate panel toggle (tac-gia page) ----------
+(function initAffiliateToggle(){
+  const toggle = document.getElementById('affiliateToggle');
+  const panel = document.getElementById('affiliatePanel');
+  if (!toggle || !panel) return;
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    panel.classList.toggle('open');
+  });
+})();
+
+// ---------- Hero book video (poster shows until a real video file is added) ----------
+(function initHeroVideo(){
+  const btn = document.getElementById('heroVideoPlay');
+  const vid = document.getElementById('heroVideo');
+  if (!btn || !vid) return;
+
+  btn.addEventListener('click', () => {
+    vid.setAttribute('controls', '');
+    vid.play().catch(() => {});
+    btn.style.display = 'none';
+  });
+  vid.addEventListener('ended', () => {
+    vid.removeAttribute('controls');
+    btn.style.display = '';
+  });
+  vid.addEventListener('pause', () => {
+    if (vid.currentTime === 0) btn.style.display = '';
   });
 })();

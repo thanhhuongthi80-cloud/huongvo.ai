@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên Hệ Đặt Hàng — Hương Võ</title>
+<meta name="description" content="Liên hệ Zalo 0582 364 021 để đặt mua Chìa Khóa Tự Do và nhận tư vấn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Hương Võ</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="triet-ly.html" data-i18n="nav_triet_ly">Triết Lý Cuộc Sống</a>
+      <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
+      <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
+      <a href="index.html#bat-dau" data-i18n="nav_bat_dau">Bắt Đầu</a>
+      <a href="index.html#affiliate" data-i18n="nav_affiliate">Cộng Tác Viên</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="vi">VI</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <div class="auth-slot" id="authSlot"></div>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="subnav"><div class="subnav-inner"><a class="back-link" href="index.html" data-i18n="back_home">← Trang chủ</a></div></div>
+
+<section class="page-hero">
+  <div class="section-inner">
+    <span class="eyebrow" data-i18n="lh_eyebrow">Đặt hàng</span>
+    <h1 data-i18n="lh_title">Liên Hệ &amp; Thanh Toán</h1>
+    <p class="desc" data-i18n="lh_desc">Nhắn Zalo để được tư vấn, hoặc chuyển khoản trực tiếp qua mã QR bên dưới.</p>
+    <p class="eyebrow" id="interestLabel" style="display:none;margin-top:14px;"></p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="section-inner pay-grid">
+    <div class="contact-card">
+      <span class="eyebrow" data-i18n="lh_card_eyebrow">Cách 1 · Nhắn Zalo</span>
+      <div class="contact-number">0582 364 021</div>
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-block" href="https://zalo.me/0582364021" target="_blank" rel="noopener" data-i18n="lh_btn_zalo">Nhắn Zalo Ngay</a>
+        <a class="btn btn-ghost btn-block" href="tel:+840582364021" data-i18n="lh_btn_call">Gọi Ngay</a>
+        <button class="btn btn-ghost btn-block" type="button" id="copyBtn" data-i18n="lh_btn_copy">Sao Chép Số Điện Thoại</button>
+      </div>
+      <p class="contact-note" data-i18n="lh_note">Hỗ trợ đặt hàng 24/7 · Phản hồi trong vài phút</p>
+    </div>
+
+    <div class="pay-card">
+      <span class="eyebrow" data-i18n="lh_pay_eyebrow">Cách 2 · Chuyển khoản QR</span>
+      <div class="pay-qr"><img id="qrImg" src="https://img.vietqr.io/image/970423-1000413028-compact2.png?accountName=VO%20THI%20HUONG" alt="Mã QR chuyển khoản VietQR - TPBank - VO THI HUONG"></div>
+      <div class="pay-details">
+        <div class="pay-row"><span data-i18n="lh_pay_bank">Ngân hàng</span><strong>TPBank</strong></div>
+        <div class="pay-row"><span data-i18n="lh_pay_owner">Chủ tài khoản</span><strong>VÕ THỊ HƯƠNG</strong></div>
+        <div class="pay-row">
+          <span data-i18n="lh_pay_account">Số tài khoản</span>
+          <strong>1000413028 <button class="copy-mini" type="button" data-copy="1000413028" data-i18n="lh_pay_copy">Sao chép</button></strong>
+        </div>
+        <div class="pay-row" id="payAmountRow" style="display:none;">
+          <span data-i18n="lh_pay_amount">Số tiền</span><strong id="payAmount">—</strong>
+        </div>
+        <div class="pay-row" id="payContentRow" style="display:none;">
+          <span data-i18n="lh_pay_content">Nội dung CK</span>
+          <strong><span id="payContent">—</span> <button class="copy-mini" type="button" id="copyContentBtn" data-i18n="lh_pay_copy">Sao chép</button></strong>
+        </div>
+        <div class="pay-row" id="payRefRow" style="display:none;">
+          <span data-i18n="lh_pay_ref">Giới thiệu bởi</span><strong id="payRef">—</strong>
+        </div>
+      </div>
+      <p class="pay-note" data-i18n="lh_pay_note">Quét mã bằng app ngân hàng bất kỳ. Sau khi chuyển khoản, vui lòng nhắn Zalo kèm ảnh chụp biên lai để được xác nhận và giao hàng nhanh nhất.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="logo">Hương Võ</span>
+      <p data-i18n="footer_desc">Chìa Khóa Tự Do — hệ thống sách &amp; khóa học giúp phụ nữ hiện đại làm chủ cuộc đời cùng AI.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_nav">Điều hướng</h4>
+      <a href="index.html" data-i18n="nav_home">Trang chủ</a>
+      <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
+      <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_contact">Liên hệ</h4>
+      <a href="https://zalo.me/0582364021" target="_blank" rel="noopener">Zalo: 0582 364 021</a>
+      <a href="tel:+840582364021">0582 364 021</a>
+      <span data-i18n="footer_support">Hỗ trợ 24/7 qua Zalo</span>
+    </div>
+  </div>
+  <div class="footer-bottom" data-i18n="footer_bottom">© 2026 Chìa Khóa Tự Do. Đã đăng ký bản quyền.</div>
+</footer>
+
+<a class="zalo-float" href="https://zalo.me/0582364021" target="_blank" rel="noopener" aria-label="Chat Zalo 0582364021" title="Chat Zalo: 0582 364 021">
+  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C12.95 4 4 12.06 4 22c0 5.6 2.86 10.6 7.34 13.9-.24 2-.9 4.6-2.34 6.6 2.9-.4 6.1-1.7 8.4-3.3 2 .5 4.2.8 6.6.8 11.05 0 20-8.06 20-18S35.05 4 24 4z" fill="#1b120d"/></svg>
+</a>
+
+<div class="modal-overlay" id="registerModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Đóng">×</button>
+    <h3 data-i18n="reg_title">Đăng Ký Miễn Phí</h3>
+    <p class="modal-sub" data-i18n="reg_sub">Tạo tài khoản để lưu tiến trình đọc và nhận ưu đãi Chìa Khóa Tự Do.</p>
+    <form id="registerForm">
+      <div class="form-field"><label data-i18n="reg_name">Họ và tên</label><input type="text" id="regName" required></div>
+      <div class="form-field"><label data-i18n="reg_phone">Số điện thoại</label><input type="tel" id="regPhone" required></div>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="reg_submit">Đăng Ký Ngay</button>
+    </form>
+    <p class="form-note" data-i18n="reg_note">Miễn phí · Không cần thẻ tín dụng</p>
+  </div>
+</div>
+
+<script>
+window.PAGE_I18N = {
+  vi: {
+    lh_eyebrow: 'Đặt hàng',
+    lh_title: 'Liên Hệ Qua Zalo',
+    lh_desc: 'Nhắn tin Zalo để được tư vấn và đặt mua nhanh nhất — phản hồi trong vài phút.',
+    lh_card_eyebrow: 'Zalo hỗ trợ đặt hàng',
+    lh_btn_zalo: 'Nhắn Zalo Ngay',
+    lh_btn_call: 'Gọi Ngay',
+    lh_btn_copy: 'Sao Chép Số Điện Thoại',
+    lh_copied: 'Đã sao chép: 0582364021',
+    lh_note: 'Hỗ trợ đặt hàng 24/7 · Phản hồi trong vài phút',
+    lh_interest: 'Bạn quan tâm: ',
+    lh_pay_eyebrow: 'Cách 2 · Chuyển khoản QR',
+    lh_pay_bank: 'Ngân hàng',
+    lh_pay_owner: 'Chủ tài khoản',
+    lh_pay_account: 'Số tài khoản',
+    lh_pay_amount: 'Số tiền',
+    lh_pay_content: 'Nội dung CK',
+    lh_pay_ref: 'Giới thiệu bởi',
+    lh_pay_copy: 'Sao chép',
+    lh_pay_copied: 'Đã chép',
+    lh_pay_note: 'Quét mã bằng app ngân hàng bất kỳ. Sau khi chuyển khoản, vui lòng nhắn Zalo kèm ảnh chụp biên lai để được xác nhận và giao hàng nhanh nhất.',
+  },
+  en: {
+    lh_eyebrow: 'Order',
+    lh_title: 'Contact via Zalo',
+    lh_desc: 'Message us on Zalo for consultation and the fastest ordering — we reply within minutes.',
+    lh_card_eyebrow: 'Zalo order support',
+    lh_btn_zalo: 'Chat on Zalo Now',
+    lh_btn_call: 'Call Now',
+    lh_btn_copy: 'Copy Phone Number',
+    lh_copied: 'Copied: 0582364021',
+    lh_note: '24/7 order support · Reply within minutes',
+    lh_interest: 'You are interested in: ',
+    lh_pay_eyebrow: 'Option 2 · Bank Transfer QR',
+    lh_pay_bank: 'Bank',
+    lh_pay_owner: 'Account holder',
+    lh_pay_account: 'Account number',
+    lh_pay_amount: 'Amount',
+    lh_pay_content: 'Transfer note',
+    lh_pay_ref: 'Referred by',
+    lh_pay_copy: 'Copy',
+    lh_pay_copied: 'Copied',
+    lh_pay_note: 'Scan with any banking app. After transferring, please message us on Zalo with a screenshot of the receipt for the fastest confirmation and delivery.',
+  }
+};
+</script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const sp = params.get('sp');
+  const code = params.get('code');
+  const amount = params.get('amount');
+  const lang = () => localStorage.getItem('hv_lang') || 'vi';
+  const t = (key, fallback) => (window.PAGE_I18N[lang()] && window.PAGE_I18N[lang()][key]) || fallback;
+
+  if (sp) {
+    const label = document.getElementById('interestLabel');
+    label.textContent = t('lh_interest', 'Bạn quan tâm: ') + sp;
+    label.style.display = 'block';
+  }
+
+  // Build a dynamic VietQR (bank: TPBank, account: 1000413028) pre-filled with
+  // the order amount + a plain-ASCII transfer note when coming from a product link.
+  // If this visitor arrived via an affiliate's ?ref= link, tag their referral code
+  // onto the transfer note too, so orders can be matched back to the right partner.
+  const refCode = localStorage.getItem('hv_ref');
+  const addInfo = 'DH ' + (code || 'CKTD') + (refCode ? ' REF' + refCode : '');
+  let qrUrl = 'https://img.vietqr.io/image/970423-1000413028-compact2.png?accountName=VO%20THI%20HUONG&addInfo=' + encodeURIComponent(addInfo);
+  if (amount) qrUrl += '&amount=' + encodeURIComponent(amount);
+  document.getElementById('qrImg').src = qrUrl;
+  document.getElementById('payContent').textContent = addInfo;
+  document.getElementById('payContentRow').style.display = 'flex';
+  if (amount) {
+    document.getElementById('payAmount').textContent = Number(amount).toLocaleString('vi-VN') + 'đ';
+    document.getElementById('payAmountRow').style.display = 'flex';
+  }
+  if (refCode) {
+    document.getElementById('payRef').textContent = refCode;
+    document.getElementById('payRefRow').style.display = 'flex';
+  }
+
+  // Log this as an order/checkout event when there's something worth recording
+  // (a chosen product and/or a referral code) — see google-sheet/ for setup.
+  if (window.HVLogSheet && (code || refCode)) {
+    window.HVLogSheet({ type: 'don_hang', refCode: refCode || '', product: sp || code || '', amount: amount || '' });
+  }
+
+  function wireCopy(btn, getText){
+    if (!btn) return;
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(getText());
+        const original = btn.textContent;
+        btn.textContent = t('lh_pay_copied', 'Đã chép');
+        setTimeout(() => { btn.textContent = original; }, 1500);
+      } catch (e) {}
+    });
+  }
+  wireCopy(document.getElementById('copyContentBtn'), () => document.getElementById('payContent').textContent);
+  document.querySelectorAll('.copy-mini[data-copy]').forEach(btn => {
+    wireCopy(btn, () => btn.dataset.copy);
+  });
+
+  const copyBtn = document.getElementById('copyBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('0582364021');
+        const original = copyBtn.textContent;
+        copyBtn.textContent = t('lh_copied', 'Đã sao chép: 0582364021');
+        setTimeout(() => { copyBtn.textContent = original; }, 1800);
+      } catch (e) {}
+    });
+  }
+})();
+</script>
+</body>
+</html>
