@@ -542,6 +542,18 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.2vw,2.5rem);fon
 .phi-card.open .phi-toggle .arrow{transform:rotate(90deg);}
 .phi-toggle .arrow{display:inline-block;transition:transform .2s;}
 
+/* ---------- LOCKED PRODUCTS ---------- */
+.locked-banner{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  max-width:700px;margin:0 auto 40px;padding:14px 22px;
+  background:oklch(74% .15 55 / .12);border:1px solid oklch(74% .15 55 / .4);
+  border-radius:999px;color:var(--fg);font-size:.9rem;font-weight:600;text-align:center;
+}
+.locked-banner-icon{font-size:1.1rem;flex-shrink:0;}
+.product-section.locked .product-actions a{
+  pointer-events:none;opacity:.4;filter:grayscale(.4);
+}
+
 /* ---------- PRODUCT GRID (san-pham) ---------- */
 .product-section{padding:20px 0 90px;}
 .product-hero-img{max-width:700px;margin:0 auto 60px;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:0 30px 60px -16px rgba(0,0,0,.7);}
