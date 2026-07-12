@@ -20,7 +20,7 @@
       <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
       <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
       <a href="index.html#bat-dau" data-i18n="nav_bat_dau">Bắt Đầu</a>
-      <a href="index.html#affiliate" data-i18n="nav_affiliate">Cộng Tác Viên</a>
+      <a href="cong-tac-vien.html" data-i18n="nav_affiliate">Cộng Tác Viên</a>
     </nav>
     <div class="nav-right">
       <div class="lang-switch">
@@ -50,6 +50,11 @@
     <div class="contact-card">
       <span class="eyebrow" data-i18n="lh_card_eyebrow">Cách 1 · Nhắn Zalo</span>
       <div class="contact-number">0582 364 021</div>
+      <div class="pay-qr zalo-qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;ecc=H&amp;data=https%3A%2F%2Fzalo.me%2F0582364021" alt="Mã QR Zalo 0582 364 021">
+        <span class="zalo-qr-badge">Zalo</span>
+      </div>
+      <p class="contact-note" data-i18n="lh_qr_hint">Quét mã để chat Zalo ngay</p>
       <div class="contact-actions">
         <a class="btn btn-primary btn-block" href="https://zalo.me/0582364021" target="_blank" rel="noopener" data-i18n="lh_btn_zalo">Nhắn Zalo Ngay</a>
         <a class="btn btn-ghost btn-block" href="tel:+840582364021" data-i18n="lh_btn_call">Gọi Ngay</a>
@@ -118,6 +123,7 @@
     <form id="registerForm">
       <div class="form-field"><label data-i18n="reg_name">Họ và tên</label><input type="text" id="regName" required></div>
       <div class="form-field"><label data-i18n="reg_phone">Số điện thoại</label><input type="tel" id="regPhone" required></div>
+      <div class="form-field"><label data-i18n="reg_email">Email</label><input type="email" id="regEmail" required></div>
       <button type="submit" class="btn btn-primary btn-block" data-i18n="reg_submit">Đăng Ký Ngay</button>
     </form>
     <p class="form-note" data-i18n="reg_note">Miễn phí · Không cần thẻ tín dụng</p>
@@ -131,6 +137,7 @@ window.PAGE_I18N = {
     lh_title: 'Liên Hệ Qua Zalo',
     lh_desc: 'Nhắn tin Zalo để được tư vấn và đặt mua nhanh nhất — phản hồi trong vài phút.',
     lh_card_eyebrow: 'Zalo hỗ trợ đặt hàng',
+    lh_qr_hint: 'Quét mã để chat Zalo ngay',
     lh_btn_zalo: 'Nhắn Zalo Ngay',
     lh_btn_call: 'Gọi Ngay',
     lh_btn_copy: 'Sao Chép Số Điện Thoại',
@@ -153,6 +160,7 @@ window.PAGE_I18N = {
     lh_title: 'Contact via Zalo',
     lh_desc: 'Message us on Zalo for consultation and the fastest ordering — we reply within minutes.',
     lh_card_eyebrow: 'Zalo order support',
+    lh_qr_hint: 'Scan to chat on Zalo instantly',
     lh_btn_zalo: 'Chat on Zalo Now',
     lh_btn_call: 'Call Now',
     lh_btn_copy: 'Copy Phone Number',
@@ -210,11 +218,17 @@ window.PAGE_I18N = {
     document.getElementById('payRefRow').style.display = 'flex';
   }
 
-  // Log this as an order/checkout event when there's something worth recording
-  // (a chosen product and/or a referral code) — see google-sheet/ for setup.
-  if (window.HVLogSheet && (code || refCode)) {
-    window.HVLogSheet({ type: 'don_hang', refCode: refCode || '', product: sp || code || '', amount: amount || '' });
+  // Log a LEAD (not a confirmed sale) only when the visitor takes a real step
+  // toward ordering — clicking "Nhắn Zalo Ngay" or copying the transfer note —
+  // not just from loading this page. See google-sheet/ for setup + meaning.
+  let leadLogged = false;
+  function logLeadOnce(){
+    if (leadLogged || !window.HVLogSheet || !(code || refCode)) return;
+    leadLogged = true;
+    window.HVLogSheet({ type: 'quan_tam_don_hang', refCode: refCode || '', product: sp || code || '', amount: amount || '' });
   }
+  const zaloBtn = document.querySelector('.contact-actions a[href^="https://zalo.me"]');
+  if (zaloBtn) zaloBtn.addEventListener('click', logLeadOnce);
 
   function wireCopy(btn, getText){
     if (!btn) return;
@@ -228,6 +242,8 @@ window.PAGE_I18N = {
     });
   }
   wireCopy(document.getElementById('copyContentBtn'), () => document.getElementById('payContent').textContent);
+  const copyContentBtnEl = document.getElementById('copyContentBtn');
+  if (copyContentBtnEl) copyContentBtnEl.addEventListener('click', logLeadOnce);
   document.querySelectorAll('.copy-mini[data-copy]').forEach(btn => {
     wireCopy(btn, () => btn.dataset.copy);
   });

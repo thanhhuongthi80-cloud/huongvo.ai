@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cộng Tác Viên — Dashboard | Hương Võ</title>
+<meta name="description" content="Trang quản lý Cộng Tác Viên — link giới thiệu riêng, hoa hồng 30-50% và thống kê giới thiệu của bạn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Hương Võ</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="triet-ly.html" data-i18n="nav_triet_ly">Triết Lý Cuộc Sống</a>
+      <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
+      <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
+      <a href="index.html#bat-dau" data-i18n="nav_bat_dau">Bắt Đầu</a>
+      <a href="cong-tac-vien.html" class="active" data-i18n="nav_affiliate">Cộng Tác Viên</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="vi">VI</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <div class="auth-slot" id="authSlot"></div>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="subnav"><div class="subnav-inner"><a class="back-link" href="index.html" data-i18n="back_home">← Trang chủ</a></div></div>
+
+<section class="page-hero">
+  <div class="section-inner">
+    <span class="eyebrow" data-i18n="dash_eyebrow">Cộng Tác Viên</span>
+    <h1 data-i18n="dash_title">Kiếm Thu Nhập Cùng Hương Võ</h1>
+    <p class="desc" data-i18n="dash_desc">Chia sẻ link giới thiệu của riêng bạn — nhận hoa hồng 30-50% cho mỗi đơn hàng.</p>
+  </div>
+</section>
+
+<!-- NOT REGISTERED -->
+<section class="dash-section" id="notRegisteredView" style="display:none;">
+  <div class="section-inner">
+    <div class="not-registered-card">
+      <span class="eyebrow" data-i18n="dash_join_eyebrow">Chưa có tài khoản</span>
+      <h2 data-i18n="dash_join_title">Trở thành Cộng Tác Viên miễn phí</h2>
+      <ul>
+        <li data-i18n="dash_join_li1">Có ngay link giới thiệu riêng của bạn</li>
+        <li data-i18n="dash_join_li2">Hoa hồng 30% cho Sách / Ebook / Audiobook</li>
+        <li data-i18n="dash_join_li3">Hoa hồng 50% cho Khóa học / Combo Trọn Bộ</li>
+        <li data-i18n="dash_join_li4">Thanh toán hàng tuần qua chuyển khoản ngân hàng</li>
+      </ul>
+      <button type="button" class="btn btn-primary js-open-register" data-i18n="dash_join_cta">Đăng Ký Ngay — Miễn Phí</button>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD (shown once registered) -->
+<div id="dashboardView" style="display:none;">
+
+  <div class="section-inner dash-welcome">
+    <span data-i18n="dash_welcome_pre">Chào mừng trở lại,</span> <strong id="dashUserName">—</strong> 👋
+  </div>
+
+  <nav class="dash-tabs">
+    <a class="dash-tab" href="#tong-quan" data-i18n="dash_tab1">Tổng Quan</a>
+    <a class="dash-tab" href="#link-gioi-thieu" data-i18n="dash_tab2">Link Giới Thiệu</a>
+    <a class="dash-tab" href="#hoa-hong" data-i18n="dash_tab3">Hoa Hồng &amp; Cấp Bậc</a>
+    <a class="dash-tab" href="#thanh-toan" data-i18n="dash_tab4">Thanh Toán</a>
+  </nav>
+
+  <section class="dash-section" id="tong-quan">
+    <div class="section-inner">
+      <div class="dash-section-head">
+        <span class="eyebrow" data-i18n="dash_overview_eyebrow">📊 Tổng quan</span>
+        <h2 class="dash-section-title" data-i18n="dash_overview_title">Hiệu quả giới thiệu của bạn</h2>
+        <p class="dash-section-sub" data-i18n="dash_overview_sub">Số liệu được tổng hợp từ những lượt khách vào web qua link của bạn.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item"><span class="stat-num" id="statDangKy">—</span><span class="stat-label" data-i18n="dash_stat1">Lượt bạn đã giới thiệu</span></div>
+        <div class="stat-item"><span class="stat-num" id="statQuanTam">—</span><span class="stat-label" data-i18n="dash_stat2">Khách quan tâm đơn hàng</span></div>
+        <div class="stat-item"><span class="stat-num" id="statHoaHong">—</span><span class="stat-label" data-i18n="dash_stat3">Hoa hồng ước tính</span></div>
+      </div>
+      <p class="tier-note" data-i18n="dash_overview_note">Đây là số liệu ước tính (khách quan tâm, chưa chắc đã chuyển khoản). Hoa hồng thật sẽ được xác nhận thủ công qua Zalo trước khi thanh toán.</p>
+    </div>
+  </section>
+
+  <section class="dash-section" id="link-gioi-thieu">
+    <div class="section-inner">
+      <div class="dash-section-head">
+        <span class="eyebrow" data-i18n="dash_link_eyebrow">🔗 Link giới thiệu</span>
+        <h2 class="dash-section-title" data-i18n="dash_link_title">Link riêng của bạn</h2>
+        <p class="dash-section-sub" data-i18n="dash_link_sub">Chia sẻ link này lên Zalo, Facebook — mọi khách vào web qua link đều được ghi nhận cho bạn.</p>
+      </div>
+      <div class="ref-link-row">
+        <input type="text" readonly id="dashRefLink" value="">
+        <button type="button" class="btn btn-primary" id="dashCopyRefBtn" data-i18n="aff_copy_link">Sao chép link</button>
+      </div>
+      <a href="#" target="_blank" rel="noopener" class="btn btn-ghost" id="fbShareBtn" style="margin:16px auto 0;display:table;" data-i18n="dash_fb_share">Chia sẻ lên Facebook</a>
+
+      <div class="caption-samples">
+        <h3 class="caption-title" data-i18n="dash_caption_title">Mẫu tin nhắn chia sẻ</h3>
+        <div class="caption-card">
+          <p class="caption-text" id="caption1" data-i18n="dash_caption1">Mình vừa đọc xong cuốn "Chìa Khóa Tự Do" — sách về AI dành riêng cho phụ nữ hiện đại, dễ hiểu và thực tế lắm. Ai quan tâm thì xem thử ở đây nha: {link}</p>
+          <button class="copy-mini" type="button" data-caption="caption1" data-i18n="lh_pay_copy">Sao chép</button>
+        </div>
+        <div class="caption-card">
+          <p class="caption-text" id="caption2" data-i18n="dash_caption2">5 cánh cửa giúp phụ nữ làm chủ cuộc đời cùng AI — không cần biết code, không cần kinh nghiệm. Mình để link ở đây, ai tò mò thì ghé xem: {link}</p>
+          <button class="copy-mini" type="button" data-caption="caption2" data-i18n="lh_pay_copy">Sao chép</button>
+        </div>
+        <div class="caption-card">
+          <p class="caption-text" id="caption3" data-i18n="dash_caption3">Đang có ưu đãi sách "Chìa Khóa Tự Do", tặng kèm bộ Prompt &amp; App tạo ảnh/video AI luôn. Xem chi tiết tại: {link}</p>
+          <button class="copy-mini" type="button" data-caption="caption3" data-i18n="lh_pay_copy">Sao chép</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dash-section" id="hoa-hong">
+    <div class="section-inner">
+      <div class="dash-section-head">
+        <span class="eyebrow" data-i18n="dash_tier_eyebrow">💰 Hoa hồng</span>
+        <h2 class="dash-section-title" data-i18n="dash_tier_title">Mức hoa hồng theo sản phẩm</h2>
+      </div>
+      <table class="tier-table">
+        <thead>
+          <tr>
+            <th data-i18n="dash_tier_th1">Loại sản phẩm</th>
+            <th data-i18n="dash_tier_th2">Hoa hồng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="aff1_title">Sách / Ebook / Audiobook</td>
+            <td class="tier-percent">30%</td>
+          </tr>
+          <tr>
+            <td data-i18n="aff2_title">Khóa học / Combo Trọn Bộ</td>
+            <td class="tier-percent">50%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="tier-note" data-i18n="dash_tier_note">Cấp bậc theo doanh số (Đối Tác → Đại Sứ) đang được xây dựng — sẽ cập nhật sớm.</p>
+    </div>
+  </section>
+
+  <section class="dash-section" id="thanh-toan">
+    <div class="section-inner">
+      <div class="dash-section-head">
+        <span class="eyebrow" data-i18n="dash_payout_eyebrow">🏦 Thanh toán</span>
+        <h2 class="dash-section-title" data-i18n="dash_payout_title">Nhận hoa hồng</h2>
+      </div>
+      <div class="payout-card">
+        <p data-i18n="dash_payout_text">Hoa hồng được đối soát và chuyển khoản hàng tuần. Khi có đơn hàng qua link của bạn, hãy nhắn Zalo để được xác nhận và hẹn lịch thanh toán.</p>
+        <a href="https://zalo.me/0582364021" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="dash_payout_cta">Nhắn Zalo Về Hoa Hồng</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="logo">Hương Võ</span>
+      <p data-i18n="footer_desc">Chìa Khóa Tự Do — hệ thống sách &amp; khóa học giúp phụ nữ hiện đại làm chủ cuộc đời cùng AI.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_nav">Điều hướng</h4>
+      <a href="index.html" data-i18n="nav_home">Trang chủ</a>
+      <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
+      <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_contact">Liên hệ</h4>
+      <a href="https://zalo.me/0582364021" target="_blank" rel="noopener">Zalo: 0582 364 021</a>
+      <a href="tel:+840582364021">0582 364 021</a>
+      <span data-i18n="footer_support">Hỗ trợ 24/7 qua Zalo</span>
+    </div>
+  </div>
+  <div class="footer-bottom" data-i18n="footer_bottom">© 2026 Chìa Khóa Tự Do. Đã đăng ký bản quyền.</div>
+</footer>
+
+<a class="zalo-float" href="https://zalo.me/0582364021" target="_blank" rel="noopener" aria-label="Chat Zalo 0582364021" title="Chat Zalo: 0582 364 021">
+  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C12.95 4 4 12.06 4 22c0 5.6 2.86 10.6 7.34 13.9-.24 2-.9 4.6-2.34 6.6 2.9-.4 6.1-1.7 8.4-3.3 2 .5 4.2.8 6.6.8 11.05 0 20-8.06 20-18S35.05 4 24 4z" fill="#1b120d"/></svg>
+</a>
+
+<div class="modal-overlay" id="registerModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Đóng">×</button>
+    <h3 data-i18n="reg_title">Đăng Ký Miễn Phí</h3>
+    <p class="modal-sub" data-i18n="reg_sub">Tạo tài khoản để lưu tiến trình đọc và nhận ưu đãi Chìa Khóa Tự Do.</p>
+    <form id="registerForm">
+      <div class="form-field"><label data-i18n="reg_name">Họ và tên</label><input type="text" id="regName" required></div>
+      <div class="form-field"><label data-i18n="reg_phone">Số điện thoại</label><input type="tel" id="regPhone" required></div>
+      <div class="form-field"><label data-i18n="reg_email">Email</label><input type="email" id="regEmail" required></div>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="reg_submit">Đăng Ký Ngay</button>
+    </form>
+    <p class="form-note" data-i18n="reg_note">Miễn phí · Không cần thẻ tín dụng</p>
+  </div>
+</div>
+
+<script>
+window.PAGE_I18N = {
+  vi: {
+    dash_eyebrow: 'Cộng Tác Viên',
+    dash_title: 'Kiếm Thu Nhập Cùng Hương Võ',
+    dash_desc: 'Chia sẻ link giới thiệu của riêng bạn — nhận hoa hồng 30-50% cho mỗi đơn hàng.',
+    dash_join_eyebrow: 'Chưa có tài khoản',
+    dash_join_title: 'Trở thành Cộng Tác Viên miễn phí',
+    dash_join_li1: 'Có ngay link giới thiệu riêng của bạn',
+    dash_join_li2: 'Hoa hồng 30% cho Sách / Ebook / Audiobook',
+    dash_join_li3: 'Hoa hồng 50% cho Khóa học / Combo Trọn Bộ',
+    dash_join_li4: 'Thanh toán hàng tuần qua chuyển khoản ngân hàng',
+    dash_join_cta: 'Đăng Ký Ngay — Miễn Phí',
+    dash_welcome_pre: 'Chào mừng trở lại,',
+    dash_tab1: 'Tổng Quan',
+    dash_tab2: 'Link Giới Thiệu',
+    dash_tab3: 'Hoa Hồng & Cấp Bậc',
+    dash_tab4: 'Thanh Toán',
+    dash_overview_eyebrow: '📊 Tổng quan',
+    dash_overview_title: 'Hiệu quả giới thiệu của bạn',
+    dash_overview_sub: 'Số liệu được tổng hợp từ những lượt khách vào web qua link của bạn.',
+    dash_stat1: 'Lượt bạn đã giới thiệu',
+    dash_stat2: 'Khách quan tâm đơn hàng',
+    dash_stat3: 'Hoa hồng ước tính',
+    dash_overview_note: 'Đây là số liệu ước tính (khách quan tâm, chưa chắc đã chuyển khoản). Hoa hồng thật sẽ được xác nhận thủ công qua Zalo trước khi thanh toán.',
+    dash_link_eyebrow: '🔗 Link giới thiệu',
+    dash_link_title: 'Link riêng của bạn',
+    dash_link_sub: 'Chia sẻ link này lên Zalo, Facebook — mọi khách vào web qua link đều được ghi nhận cho bạn.',
+    dash_fb_share: 'Chia sẻ lên Facebook',
+    dash_caption_title: 'Mẫu tin nhắn chia sẻ',
+    dash_caption1: 'Mình vừa đọc xong cuốn "Chìa Khóa Tự Do" — sách về AI dành riêng cho phụ nữ hiện đại, dễ hiểu và thực tế lắm. Ai quan tâm thì xem thử ở đây nha: {link}',
+    dash_caption2: '5 cánh cửa giúp phụ nữ làm chủ cuộc đời cùng AI — không cần biết code, không cần kinh nghiệm. Mình để link ở đây, ai tò mò thì ghé xem: {link}',
+    dash_caption3: 'Đang có ưu đãi sách "Chìa Khóa Tự Do", tặng kèm bộ Prompt &amp; App tạo ảnh/video AI luôn. Xem chi tiết tại: {link}',
+    dash_tier_eyebrow: '💰 Hoa hồng',
+    dash_tier_title: 'Mức hoa hồng theo sản phẩm',
+    dash_tier_th1: 'Loại sản phẩm',
+    dash_tier_th2: 'Hoa hồng',
+    dash_tier_note: 'Cấp bậc theo doanh số (Đối Tác → Đại Sứ) đang được xây dựng — sẽ cập nhật sớm.',
+    dash_payout_eyebrow: '🏦 Thanh toán',
+    dash_payout_title: 'Nhận hoa hồng',
+    dash_payout_text: 'Hoa hồng được đối soát và chuyển khoản hàng tuần. Khi có đơn hàng qua link của bạn, hãy nhắn Zalo để được xác nhận và hẹn lịch thanh toán.',
+    dash_payout_cta: 'Nhắn Zalo Về Hoa Hồng',
+    aff1_title: 'Sách / Ebook / Audiobook',
+    aff2_title: 'Khóa học / Combo Trọn Bộ',
+    aff_copy_link: 'Sao chép link',
+  },
+  en: {
+    dash_eyebrow: 'Affiliate',
+    dash_title: 'Earn Income With Hương Võ',
+    dash_desc: 'Share your own referral link — earn 30-50% commission on every order.',
+    dash_join_eyebrow: 'No account yet',
+    dash_join_title: 'Become a free Affiliate Partner',
+    dash_join_li1: 'Get your own referral link instantly',
+    dash_join_li2: '30% commission on Book / Ebook / Audiobook',
+    dash_join_li3: '50% commission on Course / Complete Combo',
+    dash_join_li4: 'Paid weekly via bank transfer',
+    dash_join_cta: 'Sign Up Now — Free',
+    dash_welcome_pre: 'Welcome back,',
+    dash_tab1: 'Overview',
+    dash_tab2: 'Referral Link',
+    dash_tab3: 'Commission & Tiers',
+    dash_tab4: 'Payout',
+    dash_overview_eyebrow: '📊 Overview',
+    dash_overview_title: 'Your referral performance',
+    dash_overview_sub: 'Aggregated from visitors who reached the site through your link.',
+    dash_stat1: 'Referrals you\'ve made',
+    dash_stat2: 'Leads interested in ordering',
+    dash_stat3: 'Estimated commission',
+    dash_overview_note: 'These are estimates (interested leads, not confirmed transfers). Real commission is confirmed manually via Zalo before payout.',
+    dash_link_eyebrow: '🔗 Referral link',
+    dash_link_title: 'Your personal link',
+    dash_link_sub: 'Share this on Zalo, Facebook — every visitor who reaches the site through it is credited to you.',
+    dash_fb_share: 'Share on Facebook',
+    dash_caption_title: 'Sample share captions',
+    dash_caption1: 'I just finished reading "The Freedom Key" — a book about AI made for modern women, easy to follow and practical. If you\'re curious, check it out here: {link}',
+    dash_caption2: '5 doors that help women master their lives with AI — no coding, no experience needed. Leaving the link here for anyone curious: {link}',
+    dash_caption3: 'There\'s an offer on "The Freedom Key" book right now, plus a free AI image/video prompt pack and app. See details here: {link}',
+    dash_tier_eyebrow: '💰 Commission',
+    dash_tier_title: 'Commission by product',
+    dash_tier_th1: 'Product type',
+    dash_tier_th2: 'Commission',
+    dash_tier_note: 'Sales-based ranks (Partner → Ambassador) are in development — coming soon.',
+    dash_payout_eyebrow: '🏦 Payout',
+    dash_payout_title: 'Getting paid',
+    dash_payout_text: 'Commission is reconciled and transferred weekly. When you get an order through your link, message us on Zalo to confirm it and schedule payout.',
+    dash_payout_cta: 'Message Zalo About Payout',
+    aff1_title: 'Book / Ebook / Audiobook',
+    aff2_title: 'Course / Complete Combo',
+    aff_copy_link: 'Copy link',
+  }
+};
+</script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+(function(){
+  function getUser(){
+    try { return JSON.parse(localStorage.getItem('hv_user')); } catch(e){ return null; }
+  }
+  function escapeHtml(str){
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function loadStats(refCode){
+    if (!window.HV_SHEET_URL) return;
+    const cbName = 'hvStatsCb_' + Date.now();
+    const script = document.createElement('script');
+    let done = false;
+    window[cbName] = function(data){
+      done = true;
+      document.getElementById('statDangKy').textContent = data.dangKy || 0;
+      document.getElementById('statQuanTam').textContent = data.quanTam || 0;
+      document.getElementById('statHoaHong').textContent = Number(data.hoaHongUocTinh || 0).toLocaleString('vi-VN') + 'đ';
+      delete window[cbName];
+      script.remove();
+    };
+    script.src = window.HV_SHEET_URL + '?ref=' + encodeURIComponent(refCode) + '&callback=' + cbName;
+    script.onerror = function(){ delete window[cbName]; };
+    document.body.appendChild(script);
+    setTimeout(() => { if (!done) delete window[cbName]; }, 6000);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const user = getUser();
+    if (user) {
+      document.getElementById('dashboardView').style.display = '';
+      document.getElementById('dashUserName').textContent = escapeHtml(user.name || 'Bạn');
+      if (!user.refCode) {
+        // Safety net: auth.js normally assigns this on registration/affiliate render.
+        user.refCode = 'ctv' + Math.floor(10000 + Math.random() * 90000);
+        localStorage.setItem('hv_user', JSON.stringify(user));
+      }
+      const link = location.origin + '/?ref=' + user.refCode;
+      const linkInput = document.getElementById('dashRefLink');
+      linkInput.value = link;
+      const copyBtn = document.getElementById('dashCopyRefBtn');
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(link);
+          const original = copyBtn.textContent;
+          copyBtn.textContent = 'Đã chép';
+          setTimeout(() => { copyBtn.textContent = original; }, 1500);
+        } catch (e) {}
+      });
+
+      const fbBtn = document.getElementById('fbShareBtn');
+      if (fbBtn) fbBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(link);
+
+      document.querySelectorAll('.caption-text').forEach((el) => {
+        el.textContent = el.textContent.replace('{link}', link);
+      });
+      document.querySelectorAll('.copy-mini[data-caption]').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const target = document.getElementById(btn.dataset.caption);
+          if (!target) return;
+          try {
+            await navigator.clipboard.writeText(target.textContent);
+            const original = btn.textContent;
+            btn.textContent = 'Đã chép';
+            setTimeout(() => { btn.textContent = original; }, 1500);
+          } catch (e) {}
+        });
+      });
+
+      loadStats(user.refCode);
+    } else {
+      document.getElementById('notRegisteredView').style.display = '';
+    }
+  });
+})();
+</script>
+</body>
+</html>

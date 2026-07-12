@@ -18,6 +18,7 @@
     } catch (e) {}
   }
   window.HVLogSheet = logToSheet;
+  window.HV_SHEET_URL = SHEET_WEBAPP_URL;
 
   function getUser(){
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch(e){ return null; }
@@ -174,10 +175,12 @@
         e.preventDefault();
         const name = document.getElementById('regName').value.trim();
         const phone = document.getElementById('regPhone').value.trim();
+        const emailField = document.getElementById('regEmail');
+        const email = emailField ? emailField.value.trim() : '';
         if (!name || !phone) return;
         const refCode = genRefCode(name);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify({ name, phone, refCode }));
-        logToSheet({ type: 'dang_ky_ctv', name, phone, refCode });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ name, phone, email, refCode }));
+        logToSheet({ type: 'dang_ky_ctv', name, phone, email, refCode });
         closeModal();
         form.reset();
         renderAuthSlot();

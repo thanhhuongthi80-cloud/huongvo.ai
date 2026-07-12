@@ -40,7 +40,7 @@
       <a href="san-pham.html" data-i18n="nav_san_pham">Sản Phẩm</a>
       <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
       <a href="#bat-dau" data-i18n="nav_bat_dau">Bắt Đầu</a>
-      <a href="#affiliate" data-i18n="nav_affiliate">Cộng Tác Viên</a>
+      <a href="cong-tac-vien.html" data-i18n="nav_affiliate">Cộng Tác Viên</a>
     </nav>
 
     <div class="nav-right">
@@ -228,29 +228,13 @@
   </div>
 </section>
 
-<!-- AFFILIATE -->
+<!-- AFFILIATE TEASER -->
 <section class="affiliate-teaser" id="affiliate">
   <div class="section-inner">
-    <button class="affiliate-toggle" id="affiliateToggle" type="button">
-      <span data-i18n="aff_toggle">🤝 Chương Trình Cộng Tác Viên — Kiếm thu nhập cùng Hương Võ</span>
+    <a href="cong-tac-vien.html" class="affiliate-toggle">
+      <span data-i18n="aff_toggle">🤝 Chương Trình Cộng Tác Viên — Hoa hồng 30–50%, xem Dashboard của bạn</span>
       <span class="arrow">→</span>
-    </button>
-    <div class="affiliate-panel" id="affiliatePanel">
-      <div class="affiliate-grid">
-        <div class="affiliate-tier">
-          <span class="affiliate-percent">30%</span>
-          <h4 data-i18n="aff1_title">Sách / Ebook / Audiobook</h4>
-          <p data-i18n="aff1_text">Nhận ngay 30% giá trị đơn hàng cho mỗi khách bạn giới thiệu mua sách giấy, ebook hoặc audiobook.</p>
-        </div>
-        <div class="affiliate-tier featured">
-          <span class="affiliate-percent">50%</span>
-          <h4 data-i18n="aff2_title">Khóa học / Combo Trọn Bộ</h4>
-          <p data-i18n="aff2_text">Hoa hồng lên đến 50% giá trị đơn hàng khi khách đăng ký Khóa học Phụ Nữ x AI hoặc Combo Trọn Bộ.</p>
-        </div>
-      </div>
-      <div id="affiliateCta"><button type="button" class="btn btn-primary js-open-register" data-i18n="aff_cta">Đăng Ký Làm Cộng Tác Viên</button></div>
-      <p class="affiliate-note" data-i18n="aff_note">Hoa hồng được đối soát và thanh toán hàng tuần qua chuyển khoản ngân hàng.</p>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -599,6 +583,10 @@
         <label data-i18n="reg_phone">Số điện thoại</label>
         <input type="tel" id="regPhone" required>
       </div>
+      <div class="form-field">
+        <label data-i18n="reg_email">Email</label>
+        <input type="email" id="regEmail" required>
+      </div>
       <button type="submit" class="btn btn-primary btn-block" data-i18n="reg_submit">Đăng Ký Ngay</button>
     </form>
     <p class="form-note" data-i18n="reg_note">Miễn phí · Không cần thẻ tín dụng</p>
@@ -641,15 +629,7 @@ window.PAGE_I18N = {
     step3_title: 'Làm chủ cuộc đời cùng AI',
     step3_desc: 'Biến kiến thức thành hành động — và hành động thành tự do thật sự.',
     steps_cta: 'Bắt Đầu Ngay — Miễn Phí',
-    aff_toggle: '🤝 Chương Trình Cộng Tác Viên — Kiếm thu nhập cùng Hương Võ',
-    aff1_title: 'Sách / Ebook / Audiobook',
-    aff1_text: 'Nhận ngay 30% giá trị đơn hàng cho mỗi khách bạn giới thiệu mua sách giấy, ebook hoặc audiobook.',
-    aff2_title: 'Khóa học / Combo Trọn Bộ',
-    aff2_text: 'Hoa hồng lên đến 50% giá trị đơn hàng khi khách đăng ký Khóa học Phụ Nữ x AI hoặc Combo Trọn Bộ.',
-    aff_cta: 'Đăng Ký Làm Cộng Tác Viên',
-    aff_note: 'Hoa hồng được đối soát và thanh toán hàng tuần qua chuyển khoản ngân hàng.',
-    aff_copy_link: 'Sao chép link',
-    aff_link_note: 'Đây là link giới thiệu riêng của bạn. Chia sẻ link này — mọi khách đặt hàng qua link sẽ được ghi nhận cho bạn.',
+    aff_toggle: '🤝 Chương Trình Cộng Tác Viên — Hoa hồng 30–50%, xem Dashboard của bạn',
     test_eyebrow: 'Chị em đã đi cùng',
     test_heading: 'Họ đã mở cánh cửa — đến lượt bạn',
     test1_text: '"Tưởng AI khó lắm. Học 3 buổi là tôi tự viết được nội dung bán hàng cho shop nhà mình."',
@@ -788,15 +768,7 @@ window.PAGE_I18N = {
     step3_title: 'Master your life with AI',
     step3_desc: 'Turn knowledge into action — and action into real freedom.',
     steps_cta: 'Start Now — Free',
-    aff_toggle: '🤝 Affiliate Program — Earn income with Hương Võ',
-    aff1_title: 'Book / Ebook / Audiobook',
-    aff1_text: 'Get 30% of the order value for every customer you refer who buys the print book, ebook or audiobook.',
-    aff2_title: 'Course / Complete Combo',
-    aff2_text: 'Earn up to 50% of the order value when a referral signs up for the Women x AI Course or the Complete Combo.',
-    aff_cta: 'Become an Affiliate Partner',
-    aff_note: 'Commissions are reconciled and paid weekly via bank transfer.',
-    aff_copy_link: 'Copy link',
-    aff_link_note: 'This is your personal referral link. Share it — any order placed through it will be credited to you.',
+    aff_toggle: '🤝 Affiliate Program — 30–50% commission, view your Dashboard',
     test_eyebrow: 'Women who joined',
     test_heading: 'They opened the door — your turn',
     test1_text: '"I thought AI would be hard. After 3 lessons I could write my own sales content for my shop."',

@@ -20,7 +20,7 @@
       <a href="san-pham.html" class="active" data-i18n="nav_san_pham">Sản Phẩm</a>
       <a href="tac-gia.html" data-i18n="nav_tac_gia">Tác Giả</a>
       <a href="index.html#bat-dau" data-i18n="nav_bat_dau">Bắt Đầu</a>
-      <a href="index.html#affiliate" data-i18n="nav_affiliate">Cộng Tác Viên</a>
+      <a href="cong-tac-vien.html" data-i18n="nav_affiliate">Cộng Tác Viên</a>
     </nav>
     <div class="nav-right">
       <div class="lang-switch">
@@ -55,54 +55,20 @@
       <span data-i18n="locked_banner">Sản phẩm đang tạm khóa — sắp mở bán. Theo dõi để nhận thông báo sớm nhất.</span>
     </div>
 
-    <div class="product-grid">
+    <div class="product-grid single">
       <div class="product-card">
         <span class="product-badge" data-i18n="sp1_badge">Best seller</span>
         <h3 data-i18n="sp1_title">Sách giấy — Chìa Khóa Tự Do</h3>
         <p data-i18n="sp1_desc">Bản in cao cấp, bìa cứng ép nhũ vàng, 320 trang. Giao toàn quốc.</p>
+        <ul class="product-bonus">
+          <li data-i18n="sp1_bonus1">Tặng bộ Prompt tạo ảnh &amp; video AI siêu dễ dùng</li>
+          <li data-i18n="sp1_bonus2">Tặng App tạo ảnh &amp; video AI</li>
+          <li data-i18n="sp1_bonus3">Và nhiều ưu đãi khác dành riêng cho người đặt sớm</li>
+        </ul>
         <div class="product-price">299.000đ</div>
         <div class="product-actions">
           <a class="btn btn-primary btn-sm" href="lien-he.html?sp=Sach%20giay%20-%20Chia%20Khoa%20Tu%20Do&code=SACHGIAY&amount=299000" data-i18n="btn_order">Đặt mua</a>
           <a class="btn btn-ghost btn-sm" href="doc-thu.html" data-i18n="btn_download">Tải ngay</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <span class="product-badge" data-i18n="sp2_badge">Mới</span>
-        <h3 data-i18n="sp2_title">Ebook (PDF + EPUB)</h3>
-        <p data-i18n="sp2_desc">Đọc mọi lúc mọi nơi trên điện thoại, máy tính bảng, Kindle.</p>
-        <div class="product-price">149.000đ</div>
-        <div class="product-actions">
-          <a class="btn btn-primary btn-sm" href="lien-he.html?sp=Ebook%20(PDF%20%2B%20EPUB)&code=EBOOK&amount=149000" data-i18n="btn_order">Đặt mua</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <h3 data-i18n="sp3_title">Audiobook — Chính giọng Hương Võ</h3>
-        <p data-i18n="sp3_desc">Trọn bộ 6 giờ audio do chính tác giả kể chuyện. Nghe lúc lái xe, tập gym, nấu ăn.</p>
-        <div class="product-price">199.000đ</div>
-        <div class="product-actions">
-          <a class="btn btn-primary btn-sm" href="lien-he.html?sp=Audiobook%20-%20Chia%20Khoa%20Tu%20Do&code=AUDIOBOOK&amount=199000" data-i18n="btn_order">Đặt mua</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <span class="product-badge" data-i18n="sp4_badge">Trọn đời</span>
-        <h3 data-i18n="sp4_title">Khóa học — Phụ Nữ x AI</h3>
-        <p data-i18n="sp4_desc">12 buổi video + template + cộng đồng riêng. Học AI từ số 0 đến chủ động dùng cho công việc và cuộc sống.</p>
-        <div class="product-price">1.990.000đ</div>
-        <div class="product-actions">
-          <a class="btn btn-primary btn-sm" href="lien-he.html?sp=Khoa%20hoc%20-%20Phu%20Nu%20x%20AI&code=KHOAHOC&amount=1990000" data-i18n="btn_order">Đặt mua</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <span class="product-badge" data-i18n="sp5_badge">Giá tốt nhất</span>
-        <h3 data-i18n="sp5_title">Combo Trọn Bộ</h3>
-        <p data-i18n="sp5_desc">Sách giấy + Ebook + Audiobook + Khóa học. Tiết kiệm 30%.</p>
-        <div class="product-price">2.290.000đ</div>
-        <div class="product-actions">
-          <a class="btn btn-primary btn-sm" href="lien-he.html?sp=Combo%20Tron%20Bo&code=COMBO&amount=2290000" data-i18n="btn_order">Đặt mua</a>
         </div>
       </div>
     </div>
@@ -143,6 +109,7 @@
     <form id="registerForm">
       <div class="form-field"><label data-i18n="reg_name">Họ và tên</label><input type="text" id="regName" required></div>
       <div class="form-field"><label data-i18n="reg_phone">Số điện thoại</label><input type="tel" id="regPhone" required></div>
+      <div class="form-field"><label data-i18n="reg_email">Email</label><input type="email" id="regEmail" required></div>
       <button type="submit" class="btn btn-primary btn-block" data-i18n="reg_submit">Đăng Ký Ngay</button>
     </form>
     <p class="form-note" data-i18n="reg_note">Miễn phí · Không cần thẻ tín dụng</p>
@@ -161,17 +128,9 @@ window.PAGE_I18N = {
     sp1_badge: 'Best seller',
     sp1_title: 'Sách giấy — Chìa Khóa Tự Do',
     sp1_desc: 'Bản in cao cấp, bìa cứng ép nhũ vàng, 320 trang. Giao toàn quốc.',
-    sp2_badge: 'Mới',
-    sp2_title: 'Ebook (PDF + EPUB)',
-    sp2_desc: 'Đọc mọi lúc mọi nơi trên điện thoại, máy tính bảng, Kindle.',
-    sp3_title: 'Audiobook — Chính giọng Hương Võ',
-    sp3_desc: 'Trọn bộ 6 giờ audio do chính tác giả kể chuyện. Nghe lúc lái xe, tập gym, nấu ăn.',
-    sp4_badge: 'Trọn đời',
-    sp4_title: 'Khóa học — Phụ Nữ x AI',
-    sp4_desc: '12 buổi video + template + cộng đồng riêng. Học AI từ số 0 đến chủ động dùng cho công việc và cuộc sống.',
-    sp5_badge: 'Giá tốt nhất',
-    sp5_title: 'Combo Trọn Bộ',
-    sp5_desc: 'Sách giấy + Ebook + Audiobook + Khóa học. Tiết kiệm 30%.',
+    sp1_bonus1: 'Tặng bộ Prompt tạo ảnh &amp; video AI siêu dễ dùng',
+    sp1_bonus2: 'Tặng App tạo ảnh &amp; video AI',
+    sp1_bonus3: 'Và nhiều ưu đãi khác dành riêng cho người đặt sớm',
   },
   en: {
     sp_eyebrow: 'Products',
@@ -183,17 +142,9 @@ window.PAGE_I18N = {
     sp1_badge: 'Best seller',
     sp1_title: 'Print Book — The Freedom Key',
     sp1_desc: 'Premium hardcover print with gold foil, 320 pages. Nationwide delivery.',
-    sp2_badge: 'New',
-    sp2_title: 'Ebook (PDF + EPUB)',
-    sp2_desc: 'Read anywhere on phone, tablet or Kindle.',
-    sp3_title: 'Audiobook — Narrated by Hương Võ',
-    sp3_desc: 'Full 6-hour audio narrated by the author herself. Listen while driving, at the gym, or cooking.',
-    sp4_badge: 'Lifetime',
-    sp4_title: 'Course — Women x AI',
-    sp4_desc: '12 video sessions + templates + private community. Learn AI from zero to using it confidently for work and life.',
-    sp5_badge: 'Best value',
-    sp5_title: 'Complete Combo',
-    sp5_desc: 'Print book + Ebook + Audiobook + Course. Save 30%.',
+    sp1_bonus1: 'Free bonus: super easy AI image &amp; video prompt pack',
+    sp1_bonus2: 'Free bonus: AI image &amp; video creation app',
+    sp1_bonus3: 'Plus many more perks for early orders',
   }
 };
 </script>
