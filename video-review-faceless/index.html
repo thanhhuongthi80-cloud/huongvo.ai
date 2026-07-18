@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xưởng Kịch Bản Video Review Faceless</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="activationGate" class="gate-overlay">
+    <div class="gate-card">
+      <img class="gate-avatar" src="assets/avatar-camera.png" alt="">
+      <h2>Xưởng Kịch Bản Video Review Faceless</h2>
+      <p class="gate-sub">Nhập mã kích hoạt để bắt đầu sử dụng</p>
+      <input type="text" id="activationCodeInput" placeholder="Ví dụ: VRF-AB12CD" autocomplete="off">
+      <button type="button" id="activationSubmitBtn" class="btn-generate">Xác nhận mã</button>
+      <p class="gate-error hidden" id="gateError"></p>
+      <p class="gate-note">Chưa có mã? Liên hệ để được cấp mã kích hoạt sử dụng.</p>
+    </div>
+  </div>
+
+  <div id="appRoot" class="app-hidden">
+
+  <header class="app-header">
+    <div class="header-left">
+      <img class="avatar" src="assets/avatar-camera.png" alt="Avatar">
+      <h1>Xưởng Kịch Bản Video Review Faceless</h1>
+    </div>
+    <div class="header-right">
+      <button type="button" class="btn-ghost">🎥 Phòng thiết kế</button>
+      <button type="button" class="btn-link">❓ Hướng dẫn dùng</button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb">
+    <button type="button" class="crumb active" data-page="page1">TRANG 1: CÀI ĐẶT THÔNG TIN</button>
+    <span class="chev">›</span>
+    <button type="button" class="crumb" data-page="page2">TRANG 2: KẾT QUẢ KỊCH BẢN</button>
+  </nav>
+
+  <main class="wrap">
+
+    <!-- PAGE 1 -->
+    <section id="page1" class="page">
+
+      <div class="card hero">
+        <div class="hero-text">
+          <h2>Soạn kịch bản Video Review triệu view chỉ trong 1 phút</h2>
+          <p>Điền thông tin sản phẩm và bối cảnh mong muốn. Công cụ sẽ gom lại thành kịch bản giọng đọc và câu lệnh dựng video hoàn chỉnh, dùng ngay cho Sora/Veo/Kling hoặc quay dựng thủ công.</p>
+        </div>
+        <div class="hero-badge">
+          <span class="badge-label">ĐẶC ĐIỂM</span>
+          <span class="badge-pill">⚡ Không cần lộ mặt, không tốn phí AI</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="ico">🛍️</span> THÔNG TIN SẢN PHẨM</h3>
+        <label class="field">
+          TÊN SẢN PHẨM <span class="req">*</span>
+          <input type="text" id="productName" placeholder="Ví dụ: Đầm hoa cúc xanh">
+        </label>
+        <label class="field">
+          MÔ TẢ CHI TIẾT KIỂU DÁNG &amp; CHẤT LIỆU
+          <textarea id="productDesc" rows="3" placeholder="Ví dụ: đầm dáng nhẹ xòe, vải voan hoặc đũi mát rượi hoa nhí dịu mắt ôm eo nhẹ nhàng"></textarea>
+        </label>
+        <label class="field">
+          CÁC ĐIỂM NỔI BẬT MẤU CHỐT CẦN KHOE
+          <textarea id="productHighlights" rows="3" placeholder="Ví dụ: chất vải voan có lót kín đáo, mặc thoải mái giặt thoải mái tôn vóc dáng che bắp tay tốt"></textarea>
+        </label>
+      </div>
+
+      <div class="card">
+        <h3><span class="ico">⚙️</span> PHÂN NHÓM SẢN PHẨM</h3>
+        <label class="field">
+          CHỌN NHÓM PHÂN LOẠI SẢN PHẨM
+          <select id="category">
+            <option>Đầm</option>
+            <option>Áo</option>
+            <option>Quần</option>
+            <option>Chân váy</option>
+            <option>Đồ bộ</option>
+            <option>Túi xách</option>
+            <option>Giày dép</option>
+            <option>Phụ kiện</option>
+            <option>Mỹ phẩm</option>
+            <option>Khác</option>
+          </select>
+        </label>
+        <input type="text" id="categoryCustom" class="custom-input hidden" placeholder="Ví dụ: Váy thể thao, Set thể thao, Đồ gia dụng...">
+      </div>
+
+      <div class="card">
+        <h3><span class="ico">👁️</span> MÔI TRƯỜNG / BỐI CẢNH</h3>
+        <label class="field">
+          CHỌN BỐI CẢNH / MÔI TRƯỜNG LÀM NỀN
+          <select id="environment">
+            <option>Tự động (AI tự chọn môi trường phù hợp)</option>
+            <option>Phòng ngủ</option>
+            <option>Phòng khách</option>
+            <option>Ngoài trời / công viên</option>
+            <option>Studio chụp ảnh</option>
+            <option>Quán cà phê</option>
+            <option>Đường phố</option>
+            <option>Văn phòng</option>
+            <option>Khác</option>
+          </select>
+        </label>
+        <input type="text" id="environmentCustom" class="custom-input hidden" placeholder="Ví dụ: Sân thượng, Bãi biển, Sảnh khách sạn...">
+        <p class="note">❓ Nếu chọn, câu lệnh sinh ảnh sẽ áp dụng chuẩn xác bối cảnh này. Nếu chọn Tự động kịch bản AI sẽ thông minh thích nghi một cách tối ưu.</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="ico">⚙️</span> CẤU HÌNH VIDEO</h3>
+        <div class="config-grid">
+
+          <div class="config-col">
+            <span class="config-label">SỐ LƯỢNG VIDEO CLIP <span class="req">*</span></span>
+            <div class="stepper">
+              <button type="button" id="clipMinus" class="step-btn">-</button>
+              <input type="text" id="clipCount" value="5" readonly>
+              <button type="button" id="clipPlus" class="step-btn">+</button>
+            </div>
+            <p class="note">Mỗi clip mặc định <strong>8 giây</strong>. Tổng <strong id="totalSeconds">40 giây</strong> phim.</p>
+          </div>
+
+          <div class="config-col">
+            <span class="config-label">TỶ LỆ KHUNG HÌNH</span>
+            <div class="toggle-row" data-group="ratio">
+              <button type="button" class="toggle-btn active" data-value="9:16">9:16<small>TIKTOK / SHORTS</small></button>
+              <button type="button" class="toggle-btn" data-value="16:9">16:9<small>VIDEO NGANG</small></button>
+            </div>
+            <p class="note">Kiểm soát kích thước khung hình đồ họa.</p>
+          </div>
+
+          <div class="config-col">
+            <span class="config-label">NGÔN NGỮ CÂU LỆNH (PROMPT)</span>
+            <div class="toggle-row" data-group="promptLang">
+              <button type="button" class="toggle-btn" data-value="vi"><span class="flag">VN</span> Tiếng Việt<small>CẢNH / ẢNH TIẾNG VIỆT</small></button>
+              <button type="button" class="toggle-btn active" data-value="en"><span class="flag">US</span> Tiếng Anh<small>CẢNH / ẢNH TIẾNG ANH</small></button>
+            </div>
+            <p class="note">Chọn ngôn ngữ xuất ra cho Câu lệnh cảnh / Video.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3><span class="ico">🌐</span> HOOK MỞ ĐẦU VOICE</h3>
+          <div class="btn-grid grid2" data-group="hook">
+            <button type="button" class="opt-btn active" data-value="Các con vợ">Các con vợ</button>
+            <button type="button" class="opt-btn" data-value="Các em ơi">Các em ơi</button>
+            <button type="button" class="opt-btn" data-value="Các anh ơi">Các anh ơi</button>
+            <button type="button" class="opt-btn" data-custom="true" data-value="Khác">Khác</button>
+          </div>
+          <input type="text" id="hookCustom" class="custom-input hidden" data-reveal-for="Khác" placeholder="Nhập hook mở đầu của riêng bạn...">
+        </div>
+
+        <div class="card">
+          <h3><span class="ico">🌐</span> NGÔN NGỮ VOICE</h3>
+          <div class="btn-grid lang-grid" data-group="voiceLang">
+            <button type="button" class="opt-btn lang-btn active" data-value="vi"><span class="flag flag-vn">VN</span> Tiếng Việt</button>
+            <button type="button" class="opt-btn lang-btn" data-value="en"><span class="flag">US</span> English</button>
+            <button type="button" class="opt-btn lang-btn" data-value="ja"><span class="flag">JP</span> Japanese</button>
+            <button type="button" class="opt-btn lang-btn" data-value="ko"><span class="flag">KR</span> Korean</button>
+            <button type="button" class="opt-btn lang-btn" data-value="zh"><span class="flag">CN</span> Chinese</button>
+            <button type="button" class="opt-btn lang-btn" data-value="th"><span class="flag">TH</span> Thai</button>
+            <button type="button" class="opt-btn lang-btn" data-custom="true" data-value="Khác">⚙️ Khác</button>
+          </div>
+          <input type="text" id="voiceLangCustom" class="custom-input hidden" data-reveal-for="Khác" placeholder="Nhập ngôn ngữ khác...">
+          <p class="note note-orange">* Lựa chọn cài đặt ngôn ngữ ở trên sẽ điều khiển cách mô hình AI viết chính xác lời dịch bên mục Kết quả.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="ico">🔀</span> KÊU GỌI CUỐI VOICE (CTA)</h3>
+        <p class="sub-label">CHỌN CÂU KÊU GỌI CUỐI VIDEO (CÓ THỂ CHỌN NHIỀU MỤC CÙNG LÚC)</p>
+        <div class="btn-grid cta-grid multi" data-group="cta" data-multi="true">
+          <button type="button" class="opt-btn cta-btn active" data-value="Mua ngay">Mua ngay</button>
+          <button type="button" class="opt-btn cta-btn" data-value="Nhắn tin để được tư vấn">Nhắn tin để được tư vấn</button>
+          <button type="button" class="opt-btn cta-btn" data-value="Miễn phí ship">Miễn phí ship</button>
+          <button type="button" class="opt-btn cta-btn" data-value="Đang có giảm giá">Đang có giảm giá</button>
+          <button type="button" class="opt-btn cta-btn" data-value="Số lượng có hạn">Số lượng có hạn</button>
+          <button type="button" class="opt-btn cta-btn" data-value="Xem giỏ hàng ngay">Xem giỏ hàng ngay</button>
+          <button type="button" class="opt-btn cta-btn" data-value="Chốt đơn hôm nay">Chốt đơn hôm nay</button>
+          <button type="button" class="opt-btn cta-btn" data-value="Lưu lại để xem sau">Lưu lại để xem sau</button>
+          <button type="button" class="opt-btn cta-btn" data-custom="true" data-value="Khác">Khác</button>
+        </div>
+        <input type="text" id="ctaCustom" class="custom-input hidden" placeholder="Nhập lời kêu gọi khác...">
+
+        <div id="discountBlock" class="custom-input hidden">
+          <span class="config-label" style="display:block;margin-bottom:10px;">CHỌN KIỂU GIẢM GIÁ</span>
+          <div class="toggle-row" data-group="discountType">
+            <button type="button" class="toggle-btn" data-value="percent">Giảm theo phần trăm<small>VD: GIẢM 20%</small></button>
+            <button type="button" class="toggle-btn" data-value="amount">Giảm theo số tiền<small>VD: GIẢM 50.000Đ</small></button>
+          </div>
+          <input type="text" id="discountPercentInput" class="custom-input hidden" data-reveal-for="percent" placeholder="Nhập số phần trăm giảm, ví dụ: 20">
+          <input type="text" id="discountAmountInput" class="custom-input hidden" data-reveal-for="amount" placeholder="Nhập số tiền giảm, ví dụ: 50000">
+        </div>
+
+        <p class="note">❓ Lựa chọn này sẽ đảm bảo kịch bản giọng đọc (Voice Over) kết thúc bằng tập hợp các lời kêu gọi mua sắm đã chọn một cách tự nhiên trôi chảy nhất.</p>
+      </div>
+
+      <hr class="divider">
+
+      <button type="button" id="generateBtn" class="btn-generate">🎬 TẠO CÂU LỆNH &amp; KỊCH BẢN PHIM</button>
+
+    </section>
+
+    <!-- PAGE 2 -->
+    <section id="page2" class="page hidden">
+
+      <div id="loadingBlock" class="card loading-block hidden">
+        <div class="loading-header">
+          <span class="loading-title">⏳ ĐANG CHẾ TÁC KỊCH BẢN...</span>
+          <span class="progress-pct" id="progressPct">TIẾN ĐỘ: 0%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="loading-sub">
+          <span id="loadingStage">Đang tổng hợp thông tin sản phẩm...</span>
+          <span>Thời gian hoàn tất ước tính: 2-4 giây</span>
+        </div>
+      </div>
+
+      <div id="resultWrap" class="hidden">
+        <div class="card hero result-banner">
+          <div class="hero-text">
+            <h2 id="resultTitle">🟢 Đã hoàn thành biên soạn kịch bản xong!</h2>
+            <p id="resultSummary"></p>
+          </div>
+          <button type="button" id="editSettingsBtn" class="btn-ghost">Thay đổi cài đặt</button>
+        </div>
+
+        <div id="resultBox"></div>
+
+        <div class="duration-bar" id="durationBar"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+  </div>
+
+  <script src="gate.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
